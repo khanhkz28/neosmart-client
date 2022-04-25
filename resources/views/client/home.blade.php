@@ -179,6 +179,17 @@
     </div>
 
   </section>
+  <section class="device-neo">
+    <div class="top-neo"> 
+      <div class="device-heading container">
+
+          <p class="neo-text">Bộ thiết bị an ninh</p>
+          <h2 class="neo-heading">NeoSmart Security</h2>
+        </div>
+          <p class="neo-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+    </div>
+  </section>
 
   </main>
 
