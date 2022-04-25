@@ -85,6 +85,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'product'], function ($router) 
     Route::delete('delete/{id}', [ProductController::class, 'destroy']);
     Route::get('show/{id}', [ProductController::class, 'show']);
     Route::get('show/category/{id}', [ProductController::class, 'showbycategory']);
+    Route::get('paginate/{perpage}', [ProductController::class, 'getAllPaginate']);
 });
 
 // Route::apiResource('/client-message', ClientMessageController::class);

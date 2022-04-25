@@ -120,4 +120,10 @@ class ProductController extends Controller
         $product->delete();
         return response()->json('Product detele seccessfully!'); 
     }
+
+    public function getAllPaginate($perpage){
+        $perpage = !isset($perpage) || $perpage <= 0 ? 1 : $perpage;
+        $product = Product::paginate($perpage);
+        return response()->json(["result" => $product, "status" => 200]);
+    }
 }

@@ -3,6 +3,7 @@
         z-index: 100 !important;
         top:0;
         left: 0;
+        transition: .15s ease-in;
     }
    
     .nav-link{
@@ -12,15 +13,20 @@
     }
 
     .brand-image img{
-        height: 2rem !important;
+        height: 2rem;
+        transition: .15s ease-in-out;
     }
 
     .form-search{
-        top:-50px;
-        right:0;
+        right:-20em;
         width: 252px;
         background: #F4F4F4;
         border-radius: 10px;
+        transition: .15s ease-in;
+    }
+
+    .float-in {
+        right: 0 !important;
     }
 
     input[id="keyword"]:focus{
@@ -251,10 +257,11 @@
         }
 
         div.nav-menu{
-            height: 45px;
+            height: 0px;
             text-align: center;
             overflow: hidden;
             transition: height .3s ease-in-out;
+            align-items: flex-start !important;
         }
 
         div.collapse{
@@ -264,6 +271,11 @@
         div.collapse div{
             display: block !important;
             text-align: center;
+        }
+
+        a.nav-link{
+            font-size: 1.7rem !important;
+            font-weight: 300;
         }
 
         form.form-search{
@@ -340,6 +352,13 @@
     }
     
     @media (max-width: 990.68px) {
+        button.btn-display-search{
+            display: none;
+        }
+        form.form-search{
+            display:none !important;
+        }
+        
         div.navbar-collapse{
             padding-left: .1rem !important;
         }
@@ -373,6 +392,14 @@
         div.question-box div{
             padding-left: 0 !important;
             padding-right: 0 !important;
+        }
+
+        div.nav-menu{
+            height: 0px;
+            text-align: center;
+            overflow: hidden;
+            transition: height .3s ease-in-out;
+            align-items: flex-start !important;
         }
     }
 
