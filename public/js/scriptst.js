@@ -1,3 +1,4 @@
+
 let main = document.getElementsByTagName('main');
 let brandImage = document.querySelector('.img-home')
 let navbar = document.querySelector('.navbar');
@@ -49,3 +50,4 @@ window.addEventListener('resize', () => {
     navHeight = navbar[0].clientHeight;
     setHeight();
 });
+
