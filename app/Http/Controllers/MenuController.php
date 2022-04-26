@@ -45,6 +45,14 @@ class MenuController extends Controller
         $Menu->save();
         return Response()->json($Menu);
     }
+    public function updateproperties(Request $request ,$id){
+        $Menu = new Menu();
+        $Menu->display = $request->input('display');
+        $Menu->display = $request->input('parent');      
+        $Menu->display = $request->input('sort');            
+        $Menu->save();
+        return Response()->json($Menu);
+    }
     public function destroy($id)
     {
         $Menu= Menu::findOrFail($id);

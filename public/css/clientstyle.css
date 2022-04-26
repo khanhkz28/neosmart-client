@@ -278,6 +278,36 @@ line-height: 26px;}
 			font-size: 18px;
 			font-weight: 300;
 		}
+		.detail-ct-title{
+			font-weight: 1000;
+			font-size: 32px;
+			line-height: 46px;
+			color: #3E3E3E;
+		}
+		.detail-ct-dt b{
+			font-weight: 700;
+			opacity: 0.8;
+		}
+		.detail-ct-description b{
+			font-weight: 700;
+			opacity: 0.8;
+		}
+		.detail-ct-dt{
+			font-size: 20px;
+			line-height: 30px;
+			color: #2E2E2E;
+			opacity: 0.6;
+		}
+		.detail-ct-description{
+			font-size: 26px;
+			line-height: 36px;
+			color: #2E2E2E;
+			opacity: 0.6;
+		}
+		.detail-ct-img img{
+			width: 100%;
+			border-radius: 12px;
+		}
 	/* end construction */
 	/* Product */
 
