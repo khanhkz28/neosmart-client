@@ -28,7 +28,7 @@ class MenuController extends Controller
         $Menu->link = $request->input('link');   
         $Menu->parent = $request->input('parent', '0'); 
         $Menu->sort = $request->input('sort', '0');   
-               
+        $Menu->display = $request->input('display', '1');  
         $Menu->save();
         return Response()->json($Menu);
     }
