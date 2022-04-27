@@ -27,7 +27,7 @@ class MenuController extends Controller
         $Menu->label = $request->input('label');          
         $Menu->link = $request->input('link');   
         $Menu->parent = $request->input('parent', '0'); 
-        $Menu->sort = $request->input('sort', '0');   
+        $Menu->position = $request->input('position', '0');   
         $Menu->display = $request->input('display', '1');  
         $Menu->save();
         return Response()->json($Menu);
@@ -41,7 +41,7 @@ class MenuController extends Controller
         $Menu->label = $request->input('label');          
         $Menu->link = $request->input('link');   
         $Menu->parent = $request->input('parent');   
-        $Menu->sort = $request->input('sort');     
+        $Menu->position = $request->input('position');     
         $Menu->display = $request->input('display');       
         $Menu->save();
         return Response()->json($Menu);
@@ -50,7 +50,7 @@ class MenuController extends Controller
         $Menu = new Menu();
         $Menu->display = $request->input('display');
         $Menu->parent = $request->input('parent');      
-        $Menu->sort = $request->input('sort');            
+        $Menu->position = $request->input('position');            
         $Menu->save();
         return Response()->json($Menu);
     }
