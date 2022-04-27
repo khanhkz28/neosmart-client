@@ -189,7 +189,7 @@
 .right-banner-img {
     width: 100%;
 }
-.arrow {
+.arrow-home {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -385,7 +385,6 @@
     text-align: center;
 }
 
-/* Блок с контролами внутри окна */
 .slider-content__controls {
     position: absolute;
     top: 0;
@@ -446,7 +445,7 @@
 .device-neo {
     margin-top: 2rem;
     background-image: url("../images/client/device.png");
-    height: 555px;
+    height: 755px;
 }
 .top-neo {
     height: 45%;
@@ -474,4 +473,13 @@
 .neo-des {
     font-size: 0.9rem;
     text-align: center;
+}
+/* slide-bot */
+
+.container-card-neo {
+    height: 100%;
+}
+.card-neo-device {
+    width: 90%;
+    height: 60%;
 }

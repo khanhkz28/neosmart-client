@@ -38,9 +38,10 @@ class MenuController extends Controller
             'link'=> 'required'
         ]);
         $Menu = new Menu();
-        $Menu->title = $request->input('title');          
-        $Menu->content = $request->input('content');   
-        $Menu->description = $request->input('description');   
+        $Menu->label = $request->input('label');          
+         $Menu->link = $request->input('link');   
+  $Menu->parent = $request->input('parent');
+  $Menu->position = $request->input('position');      
         $Menu->display = $request->input('display');            
         $Menu->save();
         return Response()->json($Menu);

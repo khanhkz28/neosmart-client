@@ -1,22 +1,22 @@
-let main = document.getElementsByTagName("main");
-let navbar = document.getElementsByTagName("nav");
-let navHeight = navbar[0].clientHeight;
-const btnToggle = document.getElementsByClassName("navbar-toggler");
-const menu = document.getElementsByClassName("nav-menu");
-setHeight = () => {
-    main[0].style.marginTop = navHeight + "px";
-};
+// let main = document.getElementsByTagName("main");
+// let navbar = document.getElementsByTagName("nav");
+// let navHeight = navbar[0].clientHeight;
+// const btnToggle = document.getElementsByClassName("navbar-toggler");
+// const menu = document.getElementsByClassName("nav-menu");
+// setHeight = () => {
+//     main[0].style.marginTop = navHeight + "px";
+// };
 
-// btnToggle[0].addEventListener('click', () => {
-//     let fullscreen = "100vh";
+// // btnToggle[0].addEventListener('click', () => {
+// //     let fullscreen = "100vh";
 
-//     if (menu[0].style.height != fullscreen)
-//         menu[0].style.height = "100vh";
-//     else
-//     menu[0].style.height = "45px";
-// })
+// //     if (menu[0].style.height != fullscreen)
+// //         menu[0].style.height = "100vh";
+// //     else
+// //     menu[0].style.height = "45px";
+// // })
 
-setHeight();
+// setHeight();
 
 window.addEventListener("resize", () => {
     navHeight = navbar[0].clientHeight;
@@ -242,7 +242,6 @@ const slider = (function () {
         }
     }
 
-    // Обновить значения слайдера
     function updateItemsInfo(value) {
         itemsInfo.update(value);
         _slideItem(true);
@@ -280,12 +279,10 @@ const slider = (function () {
 
         setClass(controlsArray);
 
-        // Передвигаем слайдер
         sliderWrapper.style.transform = `translateX(${
             itemsInfo.offset * 100
         }%)`;
 
-        // Задаем активный элемент для точек (dot)
         if (controlsInfo.dotsEnabled) {
             if (document.querySelector(".dot--active")) {
                 document
@@ -306,7 +303,6 @@ const slider = (function () {
         _render();
     }
 
-    // Создать HTML разметку для элемента
     function createHTMLElement(tagName = "div", className, innerHTML) {
         const element = document.createElement(tagName);
         className ? (element.className = className) : null;
@@ -327,3 +323,4 @@ slider.init({
 function scrollWin() {
     window.scrollBy(0, 650, "smooth");
 }
+// slide-bot-home

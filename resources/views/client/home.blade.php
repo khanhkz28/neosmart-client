@@ -47,7 +47,7 @@
     </div>
 
   </section>
-  <div class="arrow" id="arrow" onclick="scrollWin()">
+  <div class="arrow-home" id="arrow-home" onclick="scrollWin()">
     <i class="fa-solid fa-angles-down arrow-icon"></i>
 
   </div>
@@ -187,8 +187,27 @@
           <h2 class="neo-heading">NeoSmart Security</h2>
         </div>
           <p class="neo-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-
     </div>
+<div class="slide-neo">
+  <div class="container ">
+
+    <div id="wapper">
+    <div class="row filtering">
+        @foreach($data["hotproducts"] as $row )
+        <div class="col container-card-neo ">
+      <div class="card shadow-sm m-2 hot-product card-neo-device">  
+        <img src="images/{{$row->photo}}" alt="{{$row->title}}">
+        <h2 class="card-title hot-product-title py-1">{{$row->title}}</h2>    
+      </div>
+    </div>
+        @endforeach
+        </div>
+        </div>
+
+</div>
+</div>  
+  
+    
   </section>
 
   </main>
