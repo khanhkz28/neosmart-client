@@ -23,7 +23,7 @@
 //     setHeight();
 // });
 
-$(".filtering").slick({
+  $(".filtering").slick({
     slidesToShow: 3,
     slidesToScroll: 3,
     mobileFirst: true,

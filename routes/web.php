@@ -7,6 +7,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\ClientMessageController;
+use App\Http\Controllers\ListBlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,7 @@ Route::get('/faq', [FaqController::class, 'GetAll']);
 Route::get('/pagination', [PaginationController::class, 'index']);
 Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
 Route::group(['prefix' => 'congtrinh'], function ($router) {
-    Route::get('/', [BlogController::class, 'GetAll']);
+    Route::get('/', [ListBlogController::class, 'GetAll']);
     Route::get('/{id}', [BlogController::class, 'getbyid']);
 });
 

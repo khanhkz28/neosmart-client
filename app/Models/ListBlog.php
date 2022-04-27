@@ -17,4 +17,7 @@ class ListBlog extends Model
     function scopeGetAll(){
         return $this->orderBy('id','asc')->paginate(10);
     }
+    function Blog(){
+        return $this->hasMany(Blog::class,'listblog_id','id');
+    }
 }

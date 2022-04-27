@@ -37,7 +37,7 @@ class MenuController extends Controller
             'label' => 'required',
             'link'=> 'required'
         ]);
-        $Menu = new Menu();
+        $Menu = Menu::find($id);
         $Menu->title = $request->input('title');          
         $Menu->content = $request->input('content');   
         $Menu->description = $request->input('description');   

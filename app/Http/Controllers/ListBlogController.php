@@ -11,6 +11,10 @@ class ListBlogController extends Controller
         $ListBlog = ListBlog::all();
         return Response()->json($ListBlog);
     }
+    public function GetAll(){
+        $ListBlog = ListBlog::with('Blog')->get();
+        return view('client.construction.index',compact('ListBlog'));
+    }
     public function store(Request $request){
         $this->validate($request,[
             'title' => 'required',
