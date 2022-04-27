@@ -19,9 +19,9 @@ class BlogController extends Controller
         return view('client.construction.index', ['Blogs' => Blog::GetAll()]);
      
     }
-    public function GetById($id)
+    public function GetById($title)
     {
-        $row= Blog::find($id);
+        $row= Blog::find($title);
         if ($row == null) {
             return redirect('congtrinh')->with('success', 'Công trình này không tồn tại!');
         } else {
@@ -64,7 +64,8 @@ class BlogController extends Controller
             }
         }
    
-        $blog->title = $request->input('title');        
+        $blog->title = $request->input('title');         
+        $blog->detail = $request->input('detail');        
         $blog->description = $request->input('description');        
         $blog->content = $request->input('content');         
         $blog->position = $request->input('position');           
@@ -105,9 +106,10 @@ class BlogController extends Controller
                 $blog->photo= $name;
             }
         }    
-        $blog->title = $request->input('title');           
+        $blog->title = $request->input('title');  
+        $blog->detail = $request->input('detail');           
         $blog->description = $request->input('description');   
-        $blog->title = $request->input('content');    
+        $blog->content = $request->input('content');    
         $blog->position = $request->input('position');        
         $blog->display = $request->input('display'); 
         $blog->save();

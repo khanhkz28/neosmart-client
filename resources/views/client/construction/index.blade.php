@@ -3,6 +3,8 @@
 @section('breadcrumb-first', 'Công trình')
 @section('breadcrumb-second', 'Công trình')
 @section('main')
+
+
 <main>
   <div class="container-banner "> 
   <div class="banner">
@@ -13,73 +15,41 @@
       <p class="des-banner">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
   </div>
 </div>
-  <section class="container my-5 ">
-  <div class="row row-cols-1 row-cols-md-3 g-4 section-ct-body">
-  <div class="col-12">
-    <h1>Công trình Chung cư</h1>
-  </div>
-  @foreach($Blogs as $row)
-    
-    <div class="col">
-    <div class="card h-100 card-ct">
-      <img src="{{ asset('images')}}/{{{$row->photo}}}" class="card-img-top shadow " alt="{{$row->title}}">
-      <div class="card-body">
-        <h2 class="card-ct-title">{{$row->title}}</h2>
-        <p class="card-ct-text">{!!$row->description!!}</p>
-      </div>
+  <section class="container my-5 container-pd ">
 
-        <a class="card-ct-footer" href="congtrinh/{{$row->id}}">
+
+    
+  
+
+  @foreach($ListBlog as $row)
+    <h1>{{$row->title}}</h1>
+  <div class="row  g-4 section-ct-body filtering">
+    @foreach($row->Blog as $blog)
+    
+    <div class="col  ">
+    <div class="card h-100 card-ct m-2">
+      <img src="{{ asset('images/'.$blog->photo)}}" class="card-img-top shadow " alt="{{$row->title}}">
+      <div class="card-body">
+        <h2 class="card-ct-title">{{$blog->title}}</h2>
+        <div class="card-ct-text">
+
+          <p>
+          {!!$blog->description!!}
+          </p>
+        </div>
+      </div>
+   
+        <a class="card-ct-footer" href="congtrinh/{{$row->title}}" >
           <div class="card-ct-footer-text">Xem chi tiết&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right"></i></div>
         </a>
     </div>
   </div>
+     @endforeach
+     </div>
   @endforeach
 
-</div>
-<div class="row row-cols-1 row-cols-md-3 g-4 section-ct-body">
-  <div class="col-12">
-    <h1>Công trình Chung cư</h1>
-  </div>
-  @foreach($Blogs as $row)
-    
-    <div class="col">
-    <div class="card h-100 card-ct">
-      <img src="{{ asset('images')}}/{{{$row->photo}}}" class="card-img-top shadow " alt="{{$row->title}}">
-      <div class="card-body">
-        <h2 class="card-ct-title">{{$row->title}}</h2>
-        <p class="card-ct-text">{{$row->description}}</p>
-      </div>
 
-        <a class="card-ct-footer" href="congtrinh/detail/{{$row->id}}">
-          <div class="card-ct-footer-text">Xem chi tiết&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right"></i></div>
-        </a>
-    </div>
-  </div>
-  @endforeach
 
-</div>
-<div class="row row-cols-1 row-cols-md-3 g-4 section-ct-body">
-  <div class="col-12">
-    <h1>Công trình Chung cư</h1>
-  </div>
-  @foreach($Blogs as $row)
-    
-    <div class="col">
-    <div class="card h-100 card-ct">
-      <img src="{{ asset('images')}}/{{{$row->photo}}}" class="card-img-top shadow " alt="{{$row->title}}">
-      <div class="card-body">
-        <h2 class="card-ct-title">{{$row->title}}</h2>
-        <p class="card-ct-text">{{$row->description}}</p>
-      </div>
-
-        <a class="card-ct-footer" href="congtrinh/detail/{{$row->id}}">
-          <div class="card-ct-footer-text">Xem chi tiết&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right"></i></div>
-        </a>
-    </div>
-  </div>
-  @endforeach
-
-</div>
 <div class="section-contact">
     <div class="row">
       <div class="section-contact-box col-xl-3 col-lg-6">

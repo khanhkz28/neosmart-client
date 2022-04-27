@@ -1,5 +1,5 @@
 @extends('client.layout')
-@section('pageTitle', 'Công trình chi tiết')
+@section('pageTitle', $row->title)
 @section('breadcrumb-first', 'Công trình chi tiết')
 @section('breadcrumb-second', 'Công trình chi tiết')
 @section('main')
@@ -13,9 +13,24 @@
       <p class="des-banner">{{ $row->description }}</p>
   </div>
 </div>
-{{ $row->title }}
-{{ $row->description }}
-{{ $row->content }}
+<section class="container my-5 detail-ct">
+  <div class="row">
+    <div class="col-xl-6">
+        <h1 class="detail-ct-title">
+        {{ $row->title }}
+        </h1>
+        <div class="detail-ct-dt  my-3">{!! $row->detail !!}</div>
+        <div class="detail-ct-description my-3">{!! $row->description !!}</div>
+    </div>
+    
+    <div class="col-xl-6 detail-ct-img">
+        <img src="{{asset('images/')}}/{{ $row->photo }}" alt="{{ $row->title }}">
+    </div>
+  </div>
+  <div class="detail-ct-content my-5">
+    {!!$row->content!!}
+  </div>
+</section>
 <div class="section-contact">
     <div class="row">
       <div class="section-contact-box col-xl-3 col-lg-6">

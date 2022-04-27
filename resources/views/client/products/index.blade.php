@@ -21,7 +21,7 @@
               <div class="row">
               <h1 class="product-box-title"><a href="sanpham/{{$row->id}}">{{$row->title}}</a></h1>
               <div class="col-md-6">
-              <p class="product-box-price"> <?php echo number_format($row->price,0,",",".") ?></p>
+              <p class="product-box-price"> {{number_format($row->price,0,",",".")}}</p>
             <p class="product-box-text py-3">{{$row->description}}</p>
               </div>
               <div class="col-md-6">
@@ -31,7 +31,7 @@
           </div>
           <div class="col-md-4 order-1">
            
-           <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  src=" {{asset('images/')}}/{{$row->photo}}" alt="">
+              <a href="sanpham/{{$row->id}}" class="product-box-img"><img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  src=" {{asset('images/')}}/{{$row->photo}}" alt=""></a>
           </div>
         </div>
       @endforeach

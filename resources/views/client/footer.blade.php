@@ -38,13 +38,13 @@
 <div class="footer">
     <div class="container">
     <div class="row ">
-        <div class="col-3 row">
-            <img src="{{ asset('images/logofooter.png') }}" alt="" class="mb-3">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <img src="{{ asset('images/logofooter.png') }}" alt="" class="mb-3 footer-logo">
             <p><span>A.</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <p><span>T.</span>+62-812-7313-4321</p>
             <p><span>E.</span>neosmart@gmail.com</p>
         </div>
-        <div class="col-3 footer-center">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
             <h4 class="mb-5">Trang chủ</h4>
             <ul>
                 <li><a href="/congtrinh">Công trình</a></li>
@@ -53,7 +53,7 @@
                 <li><a href="lien-he">Liên hệ</a></li>
             </ul>
         </div>
-        <div class="col-3">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
             <h4 class="mb-5">Follow US</h4>
             <ul>
                 <li><a href="">Instagram</a></li>

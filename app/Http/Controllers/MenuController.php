@@ -37,12 +37,27 @@ class MenuController extends Controller
             'label' => 'required',
             'link'=> 'required'
         ]);
+<<<<<<< HEAD
         $Menu = new Menu();
         $Menu->label = $request->input('label');          
          $Menu->link = $request->input('link');   
   $Menu->parent = $request->input('parent');
   $Menu->position = $request->input('position');      
+=======
+        $Menu = Menu::find($id);
+        $Menu->title = $request->input('title');          
+        $Menu->content = $request->input('content');   
+        $Menu->description = $request->input('description');   
+>>>>>>> 324628b16fa419c80b8beccad7bde2a018ebc4ef
         $Menu->display = $request->input('display');            
+        $Menu->save();
+        return Response()->json($Menu);
+    }
+    public function updateproperties(Request $request ,$id){
+        $Menu = new Menu();
+        $Menu->display = $request->input('display');
+        $Menu->display = $request->input('parent');      
+        $Menu->display = $request->input('sort');            
         $Menu->save();
         return Response()->json($Menu);
     }

@@ -75,6 +75,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'menu'], function ($router) {
     Route::get('index', [MenuController::class, 'index']);
     Route::post('store', [MenuController::class, 'store']);
     Route::post('update/{id}', [MenuController::class, 'update']);
+    Route::post('updateproperties/{id}', [MenuController::class, 'updateproperties']);
     Route::delete('delete/{id}', [MenuController::class, 'destroy']);
     Route::get('show/{id}', [MenuController::class, 'show']);
 });
