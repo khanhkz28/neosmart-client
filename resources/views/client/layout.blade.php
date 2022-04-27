@@ -40,27 +40,52 @@
 
     <link href="{{ asset('css/slick-theme.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/slick.min.css') }}" rel="stylesheet" />
-   
+    <style>
+/* Center the loader */
+          #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 120px;
+            height: 120px;
+            margin: -76px 0 0 -76px;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+          }
+
+          @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+
+
+
+#myDivLoader {
+  display: none;
+}
+</style>
 </head>
 
-<body>
+<body >
 
-
-
-    <script type="text/javascript">
-
-    </script>
-    <?= View::make('client.header') ?>
+<?= View::make('client.header') ?>
     @yield('main')
 
     @include('client.footer')
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-   
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>      
+    <script src="{{asset('js/jquery.min.js')}}" ></script>
+    <script src="{{asset('js/slick.min.js')}}" ></script>  
     <script src="{{asset('js/scripts.js')}}"></script>
     <script src="{{asset('js/scriptst.js')}}"></script>
 </body>

@@ -28,7 +28,7 @@
     
     <div class="col  ">
     <div class="card h-100 card-ct m-2">
-      <img src="{{ asset('images/'.$blog->photo)}}" class="card-img-top shadow " alt="{{$row->title}}">
+      <img src="images/{{$blog->photo}}" class="card-img-top shadow " alt="{{$row->title}}">
       <div class="card-body">
         <h2 class="card-ct-title">{{$blog->title}}</h2>
         <div class="card-ct-text">

@@ -439,7 +439,13 @@ line-height: 22px;}
 @media (max-width: 576px) {
 	.footer {
 		width: 100%;
-		padding: 110px 110px 36px 110px;
+		padding: 25px;
+	}
+	.footer-contact {
+		width: 50%;
+	}
+	.footer-link,.footer-follow {
+		width: 25%;
 	}
 	.container-pd{
 		padding: 0 25px;

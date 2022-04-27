@@ -38,7 +38,7 @@ class MenuController extends Controller
             'link'=> 'required'
         ]);
         $Menu = Menu::find($id);
-        $Menu->title = $request->input('title');          
+        $Menu->label = $request->input('label');          
         $Menu->content = $request->input('content');   
         $Menu->description = $request->input('description');   
         $Menu->display = $request->input('display');            
