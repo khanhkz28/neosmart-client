@@ -39,17 +39,18 @@ class MenuController extends Controller
         ]);
         $Menu = Menu::find($id);
         $Menu->label = $request->input('label');          
-        $Menu->content = $request->input('content');   
-        $Menu->description = $request->input('description');   
-        $Menu->display = $request->input('display');            
+        $Menu->link = $request->input('link');   
+        $Menu->parent = $request->input('parent');   
+        $Menu->sort = $request->input('sort');     
+        $Menu->display = $request->input('display');       
         $Menu->save();
         return Response()->json($Menu);
     }
     public function updateproperties(Request $request ,$id){
         $Menu = new Menu();
         $Menu->display = $request->input('display');
-        $Menu->display = $request->input('parent');      
-        $Menu->display = $request->input('sort');            
+        $Menu->parent = $request->input('parent');      
+        $Menu->sort = $request->input('sort');            
         $Menu->save();
         return Response()->json($Menu);
     }
