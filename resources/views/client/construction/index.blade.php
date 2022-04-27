@@ -3,6 +3,8 @@
 @section('breadcrumb-first', 'Công trình')
 @section('breadcrumb-second', 'Công trình')
 @section('main')
+
+
 <main>
   <div class="container-banner "> 
   <div class="banner">
@@ -20,9 +22,7 @@
   
 
   @foreach($ListBlog as $row)
-  <div class="col-12">
     <h1>{{$row->title}}</h1>
-  </div>
   <div class="row  g-4 section-ct-body filtering">
     @foreach($row->Blog as $blog)
     

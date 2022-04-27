@@ -9,8 +9,14 @@
          
     
             <div class="card-body">
-            <img src="images/{{$row->photo}}" alt="{{$row->title}}">
-            <h2 class="card-title hot-product-title py-1">{{$row->title}}</h2>
+           <a href="sanpham//{{$row->id}}" class="product-box-img">
+
+           <img src="images/{{$row->photo}}" alt="{{$row->title}}"></a>
+           <a href="sanpham//{{$row->id}}" class="product-box-img">
+
+           <h2 class="card-title hot-product-title py-1">{{$row->title}}</h2></a>
+            
+           
               <p class="card-text hot-product-description py-3">{{$row->description}}</p>
               <div class="d-flex justify-content-between align-items-center hot-product-price py-3">
                 <span>Giá :</span>

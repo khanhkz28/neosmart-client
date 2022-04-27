@@ -286,11 +286,7 @@
             flex-direction: column;
         }
 
-        div.container div:nth-child(1){
-            padding: 0 !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-        }
+     
 
         div.title img{
             min-height: 25em !important;

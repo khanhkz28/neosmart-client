@@ -22,7 +22,6 @@
 //     navHeight = navbar[0].clientHeight;
 //     setHeight();
 // });
-
   $(".filtering").slick({
     slidesToShow: 3,
     slidesToScroll: 3,

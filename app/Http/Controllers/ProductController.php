@@ -101,7 +101,7 @@ class ProductController extends Controller
             $extention = $file->getClientOriginalExtension();
             $check = in_array($extention,$allowedfileExtention);
             if($check){
-                $name = time() . $file->getClientOriginalName();
+                $name =  $file->getClientOriginalName();
                 $file->move('images', $name);
                 $product->photo= $name;
             }
