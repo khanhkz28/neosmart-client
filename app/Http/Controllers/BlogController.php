@@ -19,9 +19,9 @@ class BlogController extends Controller
         return view('client.construction.index', ['Blogs' => Blog::GetAll()]);
      
     }
-    public function GetById($id)
+    public function GetById($title)
     {
-        $row= Blog::find($id);
+        $row= Blog::find($title);
         if ($row == null) {
             return redirect('congtrinh')->with('success', 'Công trình này không tồn tại!');
         } else {

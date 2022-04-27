@@ -8,7 +8,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\ClientMessageController;
 use App\Http\Controllers\ListBlogController;
-
+use function App\Providers\convert_name;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,10 +31,10 @@ Route::get('/pagination', [PaginationController::class, 'index']);
 Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
 Route::group(['prefix' => 'congtrinh'], function ($router) {
     Route::get('/', [ListBlogController::class, 'GetAll']);
-    Route::get('/{id}', [BlogController::class, 'getbyid']);
+    Route::get('/{title}', [BlogController::class, 'getbyid']);
 });
 
 Route::group(['prefix' => 'sanpham'], function ($router) {
     Route::get('/', [ProductController::class, 'GetAll']);
-    Route::get('/{id}', [ProductController::class, 'GetById']);
+    Route::get('/{photo}', [ProductController::class, 'GetById']);
 });

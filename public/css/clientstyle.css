@@ -431,6 +431,9 @@ line-height: 22px;}
   }
 
 @media (max-width: 576px) {
+	.container-pd{
+		padding: 0 25px;
+	}
 				.hot-product-title{
 					font-size: 12px;
 					

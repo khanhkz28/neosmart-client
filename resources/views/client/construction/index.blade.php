@@ -13,7 +13,7 @@
       <p class="des-banner">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
   </div>
 </div>
-  <section class="container my-5 ">
+  <section class="container my-5 container-pd ">
 
 
     
@@ -38,8 +38,8 @@
           </p>
         </div>
       </div>
-
-        <a class="card-ct-footer" href="congtrinh/{{$row->id}}">
+   
+        <a class="card-ct-footer" href="congtrinh/{{$row->title}}" >
           <div class="card-ct-footer-text">Xem chi tiết&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right"></i></div>
         </a>
     </div>

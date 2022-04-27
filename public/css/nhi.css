@@ -77,7 +77,7 @@
 @media (min-width: 1024px) {
     .content-banner {
         width: 80%;
-        top: 40% !important;
+        top: 25% !important;
         left: 14% !important;
         gap: 1rem;
     }
