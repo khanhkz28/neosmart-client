@@ -13,6 +13,6 @@ class Menu extends Model
         'label',
         'link',
         'parent',
-        'sort'
+        'position'
     ];
 }
