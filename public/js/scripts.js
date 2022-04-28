@@ -25,9 +25,33 @@
 $(".filtering").slick({
     slidesToShow: 3,
     slidesToScroll: 3,
-    mobileFirst: true,
+    // mobileFirst: true,
     arrows: true,
     speed: 300,
+    responsive: [
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: true,
+                autopalySpeed: 300,
+                dots: true,
+            },
+        },
+        {
+            breakpoint: 920,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: false,
+                autoplay: true,
+                autopalySpeed: 300,
+                dots: true,
+            },
+        },
+    ],
 });
 var filtered = false;
 

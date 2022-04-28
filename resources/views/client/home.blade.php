@@ -194,21 +194,24 @@
     <div id="wapper">
     <div class="row filtering">
         @foreach($data["hotproducts"] as $row )
-        <div class="col container-card-neo ">
-      <div class="card shadow-sm m-2 hot-product card-neo-device">  
-        <img src="images/{{$row->photo}}" alt="{{$row->title}}">
-        <h2 class="card-title hot-product-title py-1">{{$row->title}}</h2>    
+        <div class=" container-card-neo ">
+      <div class="card-neo-device">  
+        <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img">
+        <div class="card-bot">
+        <h2 class="card-title-neo">{{$row->title}}</h2>  
+        <a href="#" class=" more-neo">Xem chi tiết</a>
+      </div>  
       </div>
     </div>
         @endforeach
         </div>
         </div>
-
+</div>    
+</section>
+<div class="footer1 ">
+  <div class="background-footer">
+  </div>
 </div>
-</div>  
-  
-    
-  </section>
 
   </main>
 
