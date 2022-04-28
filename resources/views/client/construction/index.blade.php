@@ -22,7 +22,7 @@
   
 
   @foreach($ListBlog as $row)
-    <h1>{{$row->title}}</h1>
+    <h1 class="section-ct-list">{{$row->title}}</h1>
   <div class="row  g-4 section-ct-body filtering">
     @foreach($row->Blog as $blog)
     

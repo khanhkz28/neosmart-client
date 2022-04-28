@@ -225,7 +225,7 @@ line-height: 26px;}
 	.section-ct-body{
 		margin: 50px 0;
 	}
-	.section-ct-body h1{
+	.section-ct-list{
 		font-size: 32px;
 		font-weight: 800;
 	}
@@ -478,6 +478,9 @@ line-height: 22px;}
 
 
 @media (max-width: 992px) { 
+	.footer {
+		padding: 50px;
+	}
 	.section-contact-box{
 		margin:10px 0!important; 
 	 }
