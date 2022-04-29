@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light postion-relative py-4 py-2 position-fixed w-100">
-  <div class="brand-image d-flex flex-row flex-nowrap justify-content-between px-5">
+  <div class="container">
+  <div class="brand-image d-flex flex-row flex-nowrap justify-content-between">
     <a class="navbar-brand" href="{{route('home')}}"><img class="img-home" src="{{asset('/images/client/logo.png')}}"
         alt="logo"></a>
     <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,10 +27,10 @@
         </li>
       </ul>
       <div class="d-flex flex-row-reverse align-items-center position-relative">
-        <select name="sl-lang" class="sl-lang px-2 text-center mx-2" id="lang">
+        <!-- <select name="sl-lang" class="sl-lang px-2 text-center mx-2" id="lang">
           <option value="vi" selected>Vi</option>
           <option value="en">En</option>
-        </select>
+        </select> -->
         <button class="btn-display-search border-0 p-2 rounded-circle shadow-sm"><i class="bi bi-search"></i></button>
         <form class="d-flex form-search position-absolute shadow-sm">
           <div class="d-flex flex-row flex-nowrap">
@@ -39,4 +40,5 @@
         </form>
       </div>
     </div>
+  </div>
 </nav>

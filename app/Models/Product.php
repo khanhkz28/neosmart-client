@@ -28,4 +28,8 @@ class Product extends Model
     function scopeGetByPosition(){
         return $this->orderBy('id','asc');
     }
+    public function categories()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

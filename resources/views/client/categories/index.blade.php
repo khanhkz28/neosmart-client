@@ -1,56 +1,39 @@
 @extends('client.layout')
-@section('pageTitle', 'Công trình')
-@section('breadcrumb-first', 'Công trình')
-@section('breadcrumb-second', 'Công trình')
+@section('pageTitle', 'Danh mục sản phẩm')
+@section('breadcrumb-first', 'Danh mục sản phẩm')
+@section('breadcrumb-second', 'Danh mục sản phẩm')
 @section('main')
-
-
 <main>
-  <div class="container-banner "> 
+<div class="container-banner "> 
   <div class="banner">
     <img src="{{asset('images/client/bannerct.png')}}" alt="" class="banner-img">
   </div>
   <div class="content-banner">
-      <h2 class="heading-banner">Công trình đã thực hiện</h2>
+      <h2 class="heading-banner">Thiết bị nhà thông minh</h2>
       <p class="des-banner">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
   </div>
 </div>
-  <section class="container my-5 container-pd ">
+ <section class="container">
+   <div class="categories my-5">
+      @foreach($Categories as $row)
+      <div class="row featurette py-3 categories-box">
+          <div class="col-md-8 order-md-2 order-1">
+              <div class="row">
+              <h1 class="categories-box-title"><a href="danhmuc/{{$row->id}}">{{$row->title}}</a></h1>
+              <div class="col-md-12">
 
-
-    
-  
-
-  @foreach($ListBlog as $row)
-    <h1 class="section-ct-list">{{$row->title}}</h1>
-  <div class="row  g-4 section-ct-body filtering">
-    @foreach($row->Blog as $blog)
-    
-    <div class="col  ">
-    <div class="card h-100 card-ct m-2">
-      <img src="images/{{$blog->photo}}" class="card-img-top shadow " alt="{{$row->title}}">
-      <div class="card-body">
-        <h2 class="card-ct-title">{{$blog->title}}</h2>
-        <div class="card-ct-text">
-
-          <p>
-          {!!$blog->description!!}
-          </p>
+            <p class="categories-box-text py-3">{{$row->description}}</p>
+              </div>
+              </div>
+          </div>
+          <div class="col-md-4 order-md-1 order-2">
+           
+              <a href="danhmuc/{{$row->id}}" class="categories-box-img"><img class=" mx-auto"  src=" {{asset('images/')}}/{{$row->photo}}" alt=""></a>
+          </div>
         </div>
-      </div>
-   
-        <a class="card-ct-footer" href="congtrinh/{{$row->id}}" >
-          <div class="card-ct-footer-text">Xem chi tiết&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right"></i></div>
-        </a>
-    </div>
-  </div>
-     @endforeach
-     </div>
-  @endforeach
-
-
-
-<div class="section-contact">
+      @endforeach
+   </div>
+ <div class="section-contact my-5">
     <div class="row">
       <div class="section-contact-box col-xl-3 col-lg-6">
         <h2>Liên hệ với chúng tôi ngay!</h2>
@@ -67,6 +50,6 @@
     </div>
 </div>
 @include('client.hotproduct')
-  </section>
+ </section>
   </main>
 @endsection
