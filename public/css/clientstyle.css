@@ -458,7 +458,7 @@ line-height: 22px;}
 				font-size: 10px;
 			}
 			.hot-product img{
-				height: 100px!important;
+				height: 250px!important;
 				padding: 5px;
 			}
 			.hot-product-price{
@@ -492,7 +492,7 @@ line-height: 22px;}
 			font-size: 10px;
 		}
 		.hot-product img{
-			height: 200px;
+			height: 250px;
 			padding: 5px;
 		}
 		.hot-product-price{
