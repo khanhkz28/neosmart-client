@@ -47,6 +47,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'blog'], function ($router) {
     Route::get('show/{id}', [BlogController::class, 'show']);
     Route::get('show/listblog/{id}', [BlogController::class, 'GetByListBlogApi']);
     Route::post('updateDisplay/{id}', [BlogController::class, 'updateDisplay']);
+    Route::get('paginate/limit-{perpage}', [BlogController::class, 'getAllPaginate']);
 });
 Route::group(['middleware' => 'api', 'prefix' => 'category'], function ($router) {
     Route::get('index', [CategoryController::class, 'index']);

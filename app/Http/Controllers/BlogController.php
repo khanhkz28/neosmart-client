@@ -133,4 +133,10 @@ class BlogController extends Controller
         $blog->delete();
         return response()->json('Blog delete successfully!'); 
     }
+
+    public function getAllPaginate($perpage){
+        $perpage = !isset($perpage) || $perpage <= 0 ? 1 : $perpage;
+        $blog = Blog::paginate($perpage);
+        return response()->json(["result" => $blog, "status" => 200]);
+    }
 }
