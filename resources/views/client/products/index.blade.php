@@ -19,7 +19,7 @@
       <div class="row featurette py-2 product-box">
           <div class="col-md-8 order-2">
               <div class="row">
-              <h1 class="product-box-title"><a href="sanpham/{{$row->id}}">{{$row->title}}</a></h1>
+              <h1 class="product-box-title"><a href="chi-tiet/{{$row->slug}}">{{$row->title}}</a></h1>
               <div class="col-md-6">
               <p class="product-box-price"> {{number_format($row->price,0,",",".")}}</p>
             <p class="product-box-text py-3">{{$row->description}}</p>
@@ -31,7 +31,7 @@
           </div>
           <div class="col-md-4 order-1">
            
-              <a href="sanpham/{{$row->id}}" class="product-box-img"><img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  src=" {{asset('images/')}}/{{$row->photo}}" alt=""></a>
+              <a href="chi-tiet/{{$row->slug}}" class="product-box-img"><img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  src=" {{asset('images/')}}/{{$row->photo}}" alt=""></a>
           </div>
         </div>
       @endforeach

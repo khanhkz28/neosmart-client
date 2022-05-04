@@ -46,7 +46,7 @@
       </div>
     </div> -->
 
-    <div class="section-contact">
+    <div class="section-contact container">
     <div class="row">
       <div class="section-contact-box col-xl-3 col-lg-6">
         <h2>Liên hệ với chúng tôi ngay!</h2>

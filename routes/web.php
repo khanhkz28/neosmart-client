@@ -33,11 +33,13 @@ Route::group(['prefix' => 'congtrinh'], function ($router) {
     Route::get('/', [ListBlogController::class, 'GetAll']);
     Route::get('/{id}', [BlogController::class, 'getbyid']);
 });
-Route::group(['prefix' => 'danhmuc'], function ($router) {
-    Route::get('/', [CategoryController::class, 'GetAll']);
-    Route::get('/{id}', [CategoryController::class, 'GetById']);
-});
+// Route::group(['prefix' => 'danhmuc'], function ($router) {
+//     Route::get('/', [CategoryController::class, 'GetAll']);
+//     Route::get('/{id}', [ProductController::class, 'GetByCategory']);
+// });
 Route::group(['prefix' => 'sanpham'], function ($router) {
-    Route::get('/', [ProductController::class, 'GetAll']);
-    Route::get('/{photo}', [ProductController::class, 'GetById']);
+    // Route::get('/', [ProductController::class, 'GetAll']);
+    Route::get('/', [CategoryController::class, 'GetAll']);
+    Route::get('/{id}', [ProductController::class, 'GetByCategory']);
+    Route::get('chi-tiet/{slug}', [ProductController::class, 'GetById']);
 });

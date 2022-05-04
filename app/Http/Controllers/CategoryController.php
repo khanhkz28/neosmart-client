@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Str;
 class CategoryController extends Controller
 {
 
@@ -14,20 +15,15 @@ class CategoryController extends Controller
     public function GetAll(){
         return view('client.categories.index', ['Categories' => Category::all()]);
     }
-    public function GetById($id)
-    {
-        // $products = Category::find($id);
-        // $products = Category::find($id)->with('Product')->get('id');
-        // dd($products);
-        // $products = Category::with('Product')->find($id->get('category_id'));
-        // return view('client.products.bycategory', compact('products'));
-        // $Categories = Category::find($id);
+    // public function GetById($id)
+    // {
+    //     $shopdetails=ShopDetail::where('shop_id',$shopid)->get();
         
-        $row = Category::find($id);
-        // dd($row);
-        // return view('client.products.bycategory',compact('Categories'));
-        return view('client.products.bycategory', compact('row'));
-    }
+    //     $row = Category::find($id);
+    //     // dd($row);
+    //     // return view('client.products.bycategory',compact('Categories'));
+    //     return view('client.products.bycategory', compact('row'));
+    // }
     public function store(Request $request){
         $this->validate($request,[
             'title' => 'required',
@@ -47,7 +43,8 @@ class CategoryController extends Controller
             }
         }
         $Category->title = $request->input('title');          
-        $Category->description = $request->input('description');        
+        $Category->description = $request->input('description');     
+        $Category->slug = Str::slug($request->input('title'));   
         $Category->save();
         return Response()->json($Category);
     }
@@ -70,7 +67,8 @@ class CategoryController extends Controller
             }
         }  
         $Category->title = $request->input('title');          
-        $Category->description = $request->input('description');        
+        $Category->description = $request->input('description');     
+        $Category->slug = Str::slug($request->input('title'));          
         $Category->save();
         return Response()->json($Category);
     }
