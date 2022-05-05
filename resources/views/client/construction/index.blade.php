@@ -28,7 +28,7 @@
     
     <div class="col  ">
     <div class="card h-100 card-ct m-2">
-      <img src="images/{{$blog->photo}}" class="card-img-top shadow " alt="{{$row->title}}">
+      <img src="{{asset('images/')}}/{{$blog->photo}}" class="card-img-top shadow " alt="{{$row->title}}">
       <div class="card-body">
         <h2 class="card-ct-title">{{$blog->title}}</h2>
         <div class="card-ct-text">
@@ -39,7 +39,7 @@
         </div>
       </div>
    
-        <a class="card-ct-footer" href="congtrinh/{{$row->id}}" >
+        <a class="card-ct-footer" href="{{ url('cong-trinh/'.$blog->slug) }}" >
           <div class="card-ct-footer-text">Xem chi tiết&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-right"></i></div>
         </a>
     </div>

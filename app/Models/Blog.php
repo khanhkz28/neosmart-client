@@ -15,6 +15,7 @@ class Blog extends Model
         'description',
         'content',
         'photo',
+        'slug',
         'position',
         'display' ,
         'listblog_id' 

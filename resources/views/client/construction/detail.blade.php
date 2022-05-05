@@ -7,11 +7,12 @@
 <div class="container-banner"> 
   <div class="banner">
     <img src="{{asset('images/client/bannerct.png')}}" alt="{{ $row->title }}" class="banner-img">
-  </div>
-  <div class="content-banner">
+    <div class="content-banner">
       <h2 class="heading-banner">{{ $row->title }}</h2>
       <p class="des-banner">{{ $row->description }}</p>
   </div>
+  </div>
+
 </div>
 <section class="container my-5 detail-ct">
   <div class="row">
@@ -30,8 +31,7 @@
   <div class="detail-ct-content my-5">
     {!!$row->content!!}
   </div>
-</section>
-<div class="section-contact">
+  <div class="section-contact">
     <div class="row">
       <div class="section-contact-box col-xl-3 col-lg-6">
         <h2>Liên hệ với chúng tôi ngay!</h2>
@@ -47,5 +47,7 @@
       </div> 
     </div>
 </div>
+</section>
+
   </main>
 @endsection

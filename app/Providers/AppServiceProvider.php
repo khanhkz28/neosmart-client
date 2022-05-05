@@ -7,7 +7,6 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Models\Faq;
 use App\Models\Product;
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,6 +28,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         return View::share("data", ["faq" => Faq::GetAllFooter(),"blogs" => Blog::GetAll(),"hotproducts" => Product::GetByHotProduct()]);
-       
+
     }
 }
