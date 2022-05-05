@@ -19,7 +19,7 @@
       <div class="row featurette py-3 categories-box">
           <div class="col-md-8 order-md-2 order-1">
               <div class="row">
-              <h1 class="categories-box-title"><a href="danhmuc/{{$row->id}}">{{$row->title}}</a></h1>
+              <h1 class="categories-box-title"><a href="sanpham/{{$row->id}}">{{$row->title}}</a></h1>
               <div class="col-md-12">
 
             <p class="categories-box-text py-3">{{$row->description}}</p>

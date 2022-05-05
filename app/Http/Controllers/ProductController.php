@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use Illuminate\Support\Str;
+
 class ProductController extends Controller
 {
     public function index()
@@ -17,14 +19,24 @@ class ProductController extends Controller
     {
         return view('client.products.index', ['products' => Product::GetAll()]);
     }
-    public function GetById($id)
+    public function GetById($slug)
     {
+        $id = Product::where('id', $slug)
+        ->orWhere('slug', $slug)
+        ->firstOrFail();
         $row= Product::find($id);
         if ($row == null) {
             return redirect('sanpham')->with('success', 'Sản phẩm này không tồn tại!');
         } else {
             return view('client.products.detail', compact('row'));
         }
+    }
+
+    public function GetByCategory($id)
+    {
+           $products = Product::where('category_id',$id)->get();
+           return view('client.products.index', compact('products'));
+
     }
     public function store(Request $request)
     {
@@ -50,14 +62,15 @@ class ProductController extends Controller
             }
         }
             $product->title = $request->input('title');        
-            $product->price = $request->input('price');        
+            $product->price = $request->input('price'); 
             $product->description = $request->input('description');      
             $product->content = $request->input('content');        
             $product->detail = $request->input('detail');        
+            $product->slug = Str::slug($request->input('title'));
             $product->position = $request->input('position', '0');        
             $product->display = $request->input('display', '1');      
-            $product->category_id = $request->input('category_id'); 
-            $data = Category::find($request->input('category_id'));   
+            $product->category_id = $request->input('category_id');
+            $data = Category::find($request->input('category_id'));    
         if( $data == null){
             return response()->json(
                 [
@@ -84,7 +97,7 @@ class ProductController extends Controller
           return response()->json($product); 
 
     }
-
+  
     public function update(Request $request, $id)
     {
         $this->validate($request,[
@@ -110,7 +123,8 @@ class ProductController extends Controller
         $product->price = $request->input('price');      
         $product->content = $request->input('content');     
         $product->detail = $request->input('detail');           
-        $product->description = $request->input('description');      
+        $product->description = $request->input('description');
+        $product->slug = Str::slug($request->input('title'));    
         $product->position = $request->input('position');        
         $product->display = $request->input('display'); 
         $product->save();
