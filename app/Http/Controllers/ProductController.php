@@ -128,4 +128,10 @@ class ProductController extends Controller
         $product = Product::paginate($perpage);
         return response()->json(["result" => $product, "status" => 200]);
     }
+
+    public function getProductByCategoryId($categoryId, $perpage){
+        $perpage = !isset($perpage) || $perpage <= 0 ? 1 : $perpage;
+        $product = Product::where('category_id', $categoryId)->paginate($perpage);
+        return response()->json(["status" => 200, "result" => $product]);
+    }
 }
