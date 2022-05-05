@@ -145,4 +145,5 @@ class BlogController extends Controller
         $blog = Blog::paginate($perpage);
         return response()->json(["result" => $blog, "status" => 200]);
     }
+
 }

@@ -88,6 +88,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'product'], function ($router) 
     Route::get('show/{id}', [ProductController::class, 'show']);
     Route::get('show/category/{id}', [ProductController::class, 'showbycategory']);
     Route::get('paginate/{perpage}', [ProductController::class, 'getAllPaginate']);
+    Route::get('category/{categoryId}/paginate-{perpage}', [ProductController::class, 'getProductByCategoryId']);
 });
 
 // Route::apiResource('/client-message', ClientMessageController::class);
