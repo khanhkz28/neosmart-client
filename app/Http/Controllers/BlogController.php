@@ -140,4 +140,9 @@ class BlogController extends Controller
         return response()->json(["result" => $blog, "status" => 200]);
     }
 
+    public function getBlogByListBlog($listBlogId, $perpage){
+        $perpage = !isset($perpage) || $perpage <= 0 ? 1 : $perpage;
+        $blog = Blog::where('listblog_id', $listBlogId)->paginate($perpage);
+        return response()->json(["status" => 200, "result" => $blog]);
+    }
 }
