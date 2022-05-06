@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\ListBlog;
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Str;
 class BlogController extends Controller
 {
     public function index(Request $request)
@@ -19,9 +20,12 @@ class BlogController extends Controller
         return view('client.construction.index', ['Blogs' => Blog::GetAll()]);
      
     }
-    public function GetById($id)
+    public function GetById($slug)
     {
-        $row= Blog::find($id);
+        $id = Blog::where('id', $slug)
+        ->orWhere('slug', $slug)
+        ->firstOrFail();
+        $row= Blog::find($id->id);
         if ($row == null) {
             return redirect('congtrinh')->with('success', 'Công trình này không tồn tại!');
         } else {
@@ -67,7 +71,8 @@ class BlogController extends Controller
         $blog->title = $request->input('title');         
         $blog->detail = $request->input('detail');        
         $blog->description = $request->input('description');        
-        $blog->content = $request->input('content');         
+        $blog->content = $request->input('content');
+        $blog->slug = Str::slug($request->input('title'));         
         $blog->position = $request->input('position');           
         $blog->display = $request->input('display');      
         $blog->listblog_id = $request->input('listblog_id');
@@ -110,6 +115,7 @@ class BlogController extends Controller
         $blog->detail = $request->input('detail');           
         $blog->description = $request->input('description');   
         $blog->content = $request->input('content');    
+        $blog->slug = Str::slug($request->input('title'));  
         $blog->position = $request->input('position');        
         $blog->display = $request->input('display'); 
         $blog->save();

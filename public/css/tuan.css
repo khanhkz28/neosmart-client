@@ -18,6 +18,7 @@
 }
 
 .form-search {
+    display: none!important;
     right: -20em;
     width: 252px;
     background: #f4f4f4;
@@ -26,6 +27,7 @@
 }
 
 .float-in {
+    display: block!important;
     right: 0 !important;
 }
 

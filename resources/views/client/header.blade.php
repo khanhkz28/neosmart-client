@@ -11,13 +11,13 @@
     <div class="collapse navbar-collapse px-5 d-block" id="navbarTogglerDemo01">
       <ul class="navbar-nav mb-2 mb-lg-0 fw-normal">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
+          <a class="nav-link" aria-current="page" href="/">Trang chủ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/congtrinh">Công trình <i class="bi bi-chevron-down"></i></a>
+          <a class="nav-link" href="/cong-trinh">Công trình <i class="bi bi-chevron-down"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/sanpham">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
+          <a class="nav-link" href="/san-pham">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/faq">Hỏi đáp</a>

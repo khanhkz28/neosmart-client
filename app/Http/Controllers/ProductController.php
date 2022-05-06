@@ -24,6 +24,7 @@ class ProductController extends Controller
         $id = Product::where('id', $slug)
         ->orWhere('slug', $slug)
         ->firstOrFail();
+        
         $row= Product::find($id);
         if ($row == null) {
             return redirect('sanpham')->with('success', 'Sản phẩm này không tồn tại!');
@@ -32,9 +33,12 @@ class ProductController extends Controller
         }
     }
 
-    public function GetByCategory($id)
+    public function GetByCategory($slug)
     {
-           $products = Product::where('category_id',$id)->get();
+            $id = Category::where('id', $slug)
+            ->orWhere('slug', $slug)
+            ->firstOrFail();
+           $products = Product::where('category_id',$id->id)->get();
            return view('client.products.index', compact('products'));
 
     }

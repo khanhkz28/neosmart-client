@@ -45,7 +45,7 @@ $(".filtering").slick({
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                arrows: false,
+                arrows: true,
                 autoplay: true,
                 autopalySpeed: 300,
                 dots: true,

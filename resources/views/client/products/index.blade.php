@@ -7,11 +7,12 @@
 <div class="container-banner "> 
   <div class="banner">
     <img src="{{asset('images/client/bannerct.png')}}" alt="" class="banner-img">
-  </div>
-  <div class="content-banner">
+    <div class="content-banner">
       <h2 class="heading-banner">Thiết bị nhà thông minh</h2>
       <p class="des-banner">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
   </div>
+  </div>
+ 
 </div>
  <section class="container">
    <div class="product my-5">

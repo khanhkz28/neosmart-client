@@ -9,7 +9,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\ClientMessageController;
 use App\Http\Controllers\ListBlogController;
-use function App\Providers\convert_name;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,17 +29,17 @@ Route::post('/lienhe', [ClientMessageController::class, 'contact']);
 Route::get('/faq', [FaqController::class, 'GetAll']);
 Route::get('/pagination', [PaginationController::class, 'index']);
 Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
-Route::group(['prefix' => 'congtrinh'], function ($router) {
+Route::group(['prefix' => 'cong-trinh'], function ($router) {
     Route::get('/', [ListBlogController::class, 'GetAll']);
-    Route::get('/{id}', [BlogController::class, 'getbyid']);
+    Route::get('/{slug}', [BlogController::class, 'getbyid']);
 });
 // Route::group(['prefix' => 'danhmuc'], function ($router) {
 //     Route::get('/', [CategoryController::class, 'GetAll']);
 //     Route::get('/{id}', [ProductController::class, 'GetByCategory']);
 // });
-Route::group(['prefix' => 'sanpham'], function ($router) {
+Route::group(['prefix' => 'san-pham'], function ($router) {
     // Route::get('/', [ProductController::class, 'GetAll']);
     Route::get('/', [CategoryController::class, 'GetAll']);
-    Route::get('/{id}', [ProductController::class, 'GetByCategory']);
+    Route::get('/{slug}', [ProductController::class, 'GetByCategory']);
     Route::get('chi-tiet/{slug}', [ProductController::class, 'GetById']);
 });
