@@ -57,7 +57,7 @@ class CategoryController extends Controller
 
     public function show($id){
         $category = Category::find($id);
-        return response()->json(['status' => 200, 'result' => $category]);
+        return response()->json(['data' => $category]);
     }
 
     public function update(Request $request, $id)
