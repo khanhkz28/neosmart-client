@@ -55,7 +55,8 @@ class CategoryController extends Controller
         return Response()->json($Category);
     }
 
-    public function show($id){
+    public function show($id)
+    {
         $category = Category::find($id);
         return response()->json($category);
     }
@@ -66,7 +67,7 @@ class CategoryController extends Controller
             'title' => 'required',
             'description' => 'required'
         ]);
-        $Category = new Category();
+        $Category = Category::find($id);
         //image upload
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
@@ -85,6 +86,7 @@ class CategoryController extends Controller
         $Category->save();
         return Response()->json($Category);
     }
+
     public function destroy($id)
     {
         $Category = Category::findOrFail($id);
