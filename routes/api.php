@@ -51,6 +51,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'blog'], function ($router) {
     Route::get('list-{id}/paginate-{perpage}', [BlogController::class, 'getBlogByListBlog']);
 
 });
+
 Route::group(['middleware' => 'api', 'prefix' => 'category'], function ($router) {
     Route::get('index', [CategoryController::class, 'index']);
     Route::post('store', [CategoryController::class, 'store']);
