@@ -40,39 +40,39 @@
           <i class="bi bi-globe"></i> www.neosmart.vn <br>
           <i class="bi bi-envelope-fill"></i> info@neosmart.vn</p>
       </div>
-      <div class="form-contact col-lg-6 col-sm-12 col-md-12 d-flex flex-column p-5 bg-white mt-4  order-lg-2  order-1">
-        <h2 class="title-form fw-400 lh-30 w-100 text-left">GỬI TIN NHẮN CHO CHÚNG TÔI</h2>
+      <div class="form-contact col-lg-6 col-sm-12 col-md-12 d-flex flex-column p-5 bg-white mt-4  order-lg-2  order-1">  
+      <h2 class="title-form fw-400 lh-30 w-100 text-left">GỬI TIN NHẮN CHO CHÚNG TÔI</h2>
         <form action="/lienhe" method="post" class="my-5 ">
           @csrf
           <div class="form-group mb-3">
             <label for="" class="lh-30">Tên</label>
-            <input class="form-control p-2 lh-30" type="text" name="fullname" placeholder="Your Name"   value="{{old('fullname')}}"/>
+            <input class="field-name form-control p-2 lh-30" type="text" name="fullname" placeholder="Your Name"   value="{{old('fullname')}}"/>
             @error('fullname')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
           </div>
           <div class="form-group my-4">
             <label for="" class="lh-30">Email</label>
-            <input class="form-control p-2 lh-30" type="text" name="email" placeholder="Your Email"  value="{{old('email')}}"/>
+            <input class="field-email form-control p-2 lh-30" type="text" name="email" placeholder="Your Email"  value="{{old('email')}}"/>
             @error('email')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
           </div>
           <div class="form-group my-4">
             <label for="" class="lh-30">Số điện thoại</label>
-            <input class="form-control p-2 lh-30" type="text" name="phone_number" placeholder="Your phone number" value="{{old('phone_number')}}"/>
+            <input class="field-phone form-control p-2 lh-30" type="text" name="phone_number" placeholder="Your phone number" value="{{old('phone_number')}}"/>
             @error('phone_number')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
           </div>
           <div class="form-group my-4">
             <label for="message" class="form-label">Tin nhắn</label>
-            <textarea class="form-control p-4 lh-30" name="message"  id="message" rows="7" placeholder="Your Message" value="{{old('message')}}"></textarea>
+            <textarea class="field-message form-control p-4 lh-30" name="message"  id="message" rows="7" placeholder="Your Message" value="{{old('message')}}"></textarea>
             @error('message')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror 
           </div>
-          <button class="btn btn-submit w-100 text-white p-3 text-center mt-4" name="btn_submit">Gửi liên hệ </button>
+          <button class="btn btn-submit w-100 text-white p-3 text-center mt-4" type="submit" name="btn_submit">Gửi liên hệ </button>
         </form>
       </div>
     </div>
@@ -100,6 +100,25 @@
     </div>
 </div>
 @include('client.hotproduct')
-  </div>
+  </div> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+  <script>
+    var eee = 'chao ban';
+    console.log(eee);
+    var socket = io('http://localhost:6001', {
+      transports: ["websocket", "polling", "flashsocket"],
+    });
+    var elementSubmit = document.querySelector('.btn-submit')
+    // var fullName = document.querySelector('.field-name')
+    // var email = document.querySelector('.field-email')
+    // var phone = document.querySelector('.field-phone')
+    // var message = document.querySelector('.field-message')
+    elementSubmit.addEventListener('click', function() {
+      socket.emit('message', 'noti')
+      // socket.emit('message', {'name': fullName.value, 'email': email.value, 'phone': phone.value, 'message': message.value})
+    })
+
+  </script>
 </main>
 @endsection

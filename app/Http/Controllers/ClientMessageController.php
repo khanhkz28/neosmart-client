@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ClientMessage;
+use App\Events\RedisEvent;
+// use PHPSocketIO\SocketIO;
 
 class ClientMessageController extends Controller
 {
@@ -51,6 +53,11 @@ class ClientMessageController extends Controller
         ]);
         
         $message = ClientMessage::create($request->all());
+        // $io = new SocketIO(6001);
+        // $io->on('message', function($message)use($io){
+        //     $io->emit('message', $message);
+        // });
+        // event(new RedisEvent($messages));
         return response()->json([$message, 201]);
     }   
 

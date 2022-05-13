@@ -9,6 +9,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PaginationController;
 use App\Http\Controllers\ClientMessageController;
 use App\Http\Controllers\ListBlogController;
+use App\Events\RedisEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,5 @@ Route::group(['prefix' => 'san-pham'], function ($router) {
     Route::get('/{slug}', [ProductController::class, 'GetByCategory']);
     Route::get('chi-tiet/{slug}', [ProductController::class, 'GetById']);
 });
+
+
