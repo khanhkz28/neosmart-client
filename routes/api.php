@@ -100,4 +100,5 @@ Route::group(['middleware' => 'api', 'prefix' => 'client-message'], function ($r
     Route::get('/', [ClientMessageController::class, 'index']);
     Route::get('/{id}', [ClientMessageController::class, 'show']);
     Route::post('update/{id}', [ClientMessageController::class, 'update']);
+    Route::get('/paginate/limit/{per}', [ClientMessageController::class, 'paginate']);
 });
