@@ -103,4 +103,9 @@ class ClientMessageController extends Controller
 
         return response()->json(["Delete successfully", 200]);
     }
+
+    public function paginate($per){
+        $paginate = ClientMessage::paginate($per);
+        return response()->json($paginate);
+    }
 }
