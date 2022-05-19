@@ -18,7 +18,7 @@
   </section>      
   <section class="container my-5">
   <footer class="row featurette">
-  <div class="featurette-heading"><a>Tin tức</a></div>
+  <div class="featurette-heading"><a href="/cong-trinh">Tin tức</a></div>
       <div class="col-md-7 col-sm-12 order-2 order-md-1">
       
           

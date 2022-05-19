@@ -27,6 +27,7 @@
           </ul>
         </li>
         <li class="nav-item relative">
+<<<<<<< HEAD
           <a class="nav-link {{ request()->is('san-pham' , 'san-pham/*' ) ? 'active' : '' }}" href="/san-pham">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
           <ul class="sub-navbar mb-2 mb-lg-0">
               <li class="nav-item bg-light pt-1">
@@ -37,6 +38,15 @@
               </li>
               <li class="nav-item bg-light mb-2">
                 <a class="nav-link" aria-current="page" href="/san-pham/thiet-bi-xu-ly-trung-tam">Thiết bị xử lý trung tâm</a>
+=======
+          <a class="nav-link {{ request()->is('san-pham' , 'san-pham/*' ) ? 'active' : '' }}" href="{{ url('thiet-bi-nha-thong-minh') }}">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
+          <ul class="sub-navbar bg-light mb-2 mb-lg-0">
+              <li class="nav-item pt-2">
+                <a class="nav-link " aria-current="page" href="{{ url('nha-thong-minh') }}">Nhà thông minh</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link" aria-current="page" href="{{ url('thiet-bi-nha-thong-minh') }}">Thiết bị Nhà thông minh</a>
+>>>>>>> 8bfbcfdc92cfa71e27bba951ef08e3e6642a2170
               </li>
           </ul>
         </li>
