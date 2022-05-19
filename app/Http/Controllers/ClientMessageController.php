@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ClientMessage;
 use App\Events\RedisEvent;
+use Illuminate\Support\Facades\Mail;
+
 // use PHPSocketIO\SocketIO;
 
 class ClientMessageController extends Controller
@@ -36,6 +38,37 @@ class ClientMessageController extends Controller
         $messages->save();
         $alert='Bình luận của bạn đã được đưa vào danh sách xem xét hiển thị. Xin cám ơn bạn nhiều!'; 
         return  redirect()->back() ->with('alert', $alert);
+    } 
+    
+    public function sendEmail(Request $request)
+    {
+
+        $request->validate([
+            'fullname' => 'required|min:4',
+            'email' => 'required|email',
+            'phone_number' => 'required|digits:10',
+            'message' => 'required'
+        ]);
+        $data = [
+          'name' => $request->fullname,
+          'subject' =>  $request->fullname .' - Liên hệ - Neosmart',
+          'phone' => $request->phone_number,
+          'email' => $request->email,
+          'emailneosmart' => 'kensuyu1@gmail.com',
+          'Message' => $request->message,
+        ];
+        Mail::send('client.contact-template', $data, function($message) use ($data) {
+          $message->to($data['emailneosmart'])
+          ->subject($data['subject'],['name'],['phone'],['email'],['Message']);
+        });
+        $messages = new ClientMessage();
+        $messages->fullname = $request->input('fullname');          
+        $messages->email = $request->input('email');   
+        $messages->phone_number = $request->input('phone_number');    
+        $messages->message = $request->input('message');    
+        $messages->save();
+        
+        return back()->with(['message' => 'Gửi liên hệ thành công!']);
     } 
     /**
      * Store a newly created resource in storage.
