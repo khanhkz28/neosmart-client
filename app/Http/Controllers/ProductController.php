@@ -25,7 +25,7 @@ class ProductController extends Controller
         ->orWhere('slug', $slug)
         ->firstOrFail();
         
-        $row= Product::find($id);
+        $row= Product::find($id->id);
         if ($row == null) {
             return redirect('sanpham')->with('success', 'Sản phẩm này không tồn tại!');
         } else {

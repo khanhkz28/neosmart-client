@@ -43,7 +43,7 @@ Route::group(['prefix' => 'san-pham'], function ($router) {
     // Route::get('/', [ProductController::class, 'GetAll']);
     Route::get('/', [CategoryController::class, 'GetAll']);
     Route::get('/{slug}', [ProductController::class, 'GetByCategory']);
-    Route::get('chi-tiet/{slug}', [ProductController::class, 'GetById']);
+    // Route::get('chi-tiet/{slug}', [ProductController::class, 'GetById']);
 });
 
 

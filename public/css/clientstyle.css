@@ -359,7 +359,7 @@ line-height: 26px;}
 		color: var(--text-gray);
 	}
 	.product-box-price{
-		width: 90%;
+		width: 100%;
 		margin: 0 auto;
 		font-weight: 1000;
 		font-size: var(--text-font-price);
