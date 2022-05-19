@@ -24,6 +24,7 @@
     </title>
     <link href="{{ asset('images/client/logo _ Neosmart - no BG 1.png') }}" rel="icon">
     <script src="https://kit.fontawesome.com/e9a54998f0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--     Fonts and icons     -->
     <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
     <!-- CSS -->

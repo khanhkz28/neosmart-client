@@ -222,7 +222,7 @@
 }
 
 .contain-left {
-    width: 43%;
+    width: 50%;
 }
 .left {
     display: flex;
@@ -322,7 +322,7 @@
     display: inline-block;
 }
 .contain-right {
-    width: 43%;
+    width: 50%;
 }
 @media (max-width: 576px) {
     .contain-right {
@@ -336,6 +336,12 @@
     width: 100%;
     overflow: hidden;
     margin-top: 2rem;
+}
+
+.slick-initialized .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Окно со слайдами*/
@@ -493,6 +499,7 @@
 .neo-des {
     font-size: 0.9rem;
     text-align: center;
+    font-weight: 700;
 }
 /* slide-bot */
 .slide-neo {
@@ -502,11 +509,13 @@
     width: 100%;
 } */
 .card-neo-device {
-    width: 70%;
-    height: 300px;
+    width: 85%;
+    height: 340px;
     background-color: white;
     border-radius: 0.4rem;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .bg-none {
@@ -522,15 +531,24 @@
     width: 100%;
     height: 60%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
+    
+}
+.boxshadow-img {
+    box-shadow: 0px 1px 8px 1px #c6c6c6;
+}
+.card-title-neo-img-product {
+    width: 100%;
+    height: 45%;
+    object-fit: contain;
+    padding:1.5rem 3rem 0 3rem;
 }
 
 .card-title-neo {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
     height: 20%;
     text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
     width: 90%;
 }
@@ -538,7 +556,8 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
+    padding-bottom: 1.5rem;
 }
 .more-neo {
     height: 20%;
@@ -546,12 +565,143 @@
     font-size: 0.8rem;
     font-style: italic;
 }
-.slick-prev:before,
-.slick-next:before {
+.category-slick .slick-prev::before, .category-slick
+.slick-next::before {
     color: white !important;
 }
 .background-footer {
+    background-image: url("../images/Mask Group.png");
+    height: 400px;
+    background-repeat: repeat;
+}
+.background-footer1 {
     background-image: url("../images/bg-footer-blog.png");
     height: 400px;
     background-repeat: repeat;
+}
+
+
+.translate-y-20 {
+    transform: translateY(-15%);
+}
+
+.content-footer-1 {
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.title-footer-1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.text-footer-1 {
+    width: 520px;
+    color:#fff;
+    font-style: 1rem;
+    font-weight: 400;
+    margin-top: 3rem;
+    text-align: justify;
+    opacity: 0.6;
+}
+
+/* Card product */
+
+.slide-product {
+    border: 1px solid rgb(194, 194, 194);
+    height: 505px;
+}
+
+.card-title-neo-product {
+    overflow: hidden;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #777;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-content-product {
+    height: 103px;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #2e2e2ea8 !important;
+}
+
+.card-price-neo {
+    color:#33B3A6;
+}
+
+.card-title-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* End card product */
+
+
+/* Card blog */
+
+.banner-title-blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+}
+
+.title-neosmart {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.title-neosmart img{
+    width: 90%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.slide-blog {
+    background-color: transparent;
+    width: 90%;
+}
+
+/* @media (max-width: 576px) {
+    .slide-blog {
+        width: 90%;    
+    }
+} */
+
+.border-blog {
+    margin-top: -30px;
+    border-top: 4px solid #33B3A6;
+    padding-top: 10px;
+}
+
+.card-bot-blog {
+    padding: 0;
+    margin-top: 30px;
+}
+
+/* End Card blog */
+
+
+.arrow-detail {
+    transform: translateX(250%);
+    font-size: 1.1rem;
 }

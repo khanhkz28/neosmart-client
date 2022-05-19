@@ -16,4 +16,8 @@ class Category extends Model
     function Product(){
         return $this->hasMany(Product::class,'category_id','id');
     }
+    function scopeGetByHotCategory(){
+        return $this->orderBy('id','desc')->get();
+    }
+    
 }

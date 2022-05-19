@@ -188,18 +188,18 @@
         </div>
           <p class="neo-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
     </div>  
-<div class="slide-neo">
+<div class="slide-neo category-slick">
   <div class="container ">
 
     <div id="wapper">
     <div class="row filtering">
-        @foreach($data["hotproducts"] as $row )
+        @foreach($data["hotcategory"] as $row )
         <div class=" container-card-neo ">
       <div class="card-neo-device">  
-        <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img">
-        <div class="card-bot">
+        <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img boxshadow-img">
+        <div class="card-bot ">
         <h2 class="card-title-neo">{{$row->title}}</h2>  
-        <a href="/san-pham/chi-tiet/{{$row->slug}}" class=" more-neo">Xem chi tiết</a>
+        <a href="/san-pham/chi-tiet/{{$row->slug}}" class=" more-neo">Xem chi tiết <i class="fa-solid fa-arrow-right-long arrow-detail"></i></a>
       </div>  
       </div>
     </div>
@@ -208,32 +208,83 @@
         </div>
 </div>
 </section>
-<div class="footer1 ">
-  <div class="background-footer ">
-    <div class="">
-    <div class="slide-neo ">
-    <div class="container ">
-
-      <div id="wapper">
+<div class=" footer1 mt-1">
+  <div class="background-footer">
+    <div class="content-footer-1 container">
+      <h3 class="title-footer-1">Thiết bị nhà thông minh</h3>
+      <p class="text-footer-1">Bộ thiết bị an ninh NeoSmart Security gồm thiết bị an ninh trung tâm, hàng rào điện tử, các cảm biến, hệ thống camera ghi hình… dựng nên hàng rào nhiều lớp, giám sát ngôi nhà theo thời gian thực. Khi phát hiện chủ nhân quên đóng cửa nhà hoặc nguy cơ cháy nổ, xâm nhập trái phép, ...</p>
+    </div>
+    
+  </div>
+  <div class="under-background-footer">
+    <div class="slide-neo translate-y-20">
+      <div class="container ">
+        <div id="wapper">
         <div class="row filtering">
-        @foreach($data["hotblog"] as $row )
-          <div class="container-card-neo mt-20">
-            <div class="card-neo-device bg-none">  
-              <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img">
-              <div class="card-bot">
-              <h2 class="card-title-neo">{{$row->title}}</h2>  
-              <a href="/cong-trinh/{{$row->slug}}" class=" more-neo">Xem chi tiết</a>
-            </div>
+            @foreach($data["hotproducts"] as $row )
+            <div class=" container-card-neo ">
+          <div class="card-neo-device slide-product">  
+            <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img-product">
+            <div class="card-bot ">
+              <h2 class="card-title-neo-product">{{$row->title}}</h2>
+              <div>
+                <p class="card-content-product">{{$row->content}}</p> 
+                <hr>
+                <div class="row card-price-neo">
+                  <span class="col-3 card-title-price"> Giá: </span>
+                  <strong class="col-9 card-price">{{ number_format($row->price, 0, ',', '.') }} VNĐ</strong>
+                </div>
+              </div>
+            </div>  
           </div>
         </div>
-        @endforeach
+            @endforeach
+            </div>
+            </div>
+    </div>
+  
+    </div>
+  
+  </div>
+  <div class="background-footer1">
+    <div class="row container banner-title-blog"> 
+      <div class="col-6 title-neosmart">
+        <img  src="/images/neosmart-banner.png">
+      </div>
+      <div class="content-footer-1 col-6">
+        <h3 class="title-footer-1">Công trình đã thực hiện</h3>
+        <p class="text-footer-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </div>
     </div>
-</div>
+    
+  </div>
+  <div class="under-background-footer">
+    <div class="slide-neo translate-y-20">
+      <div class="container ">
+        <div id="wapper">
+        <div class="row filtering">
+            @foreach($data["hotblog"] as $row )
+            <div class=" container-card-neo ">
+          <div class=" slide-blog">  
+            <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img boxshadow-img">
+            <div class="card-bot card-bot-blog">
+              <h2 class="card-title-neo-product">{{$row->title}}</h2>
+              <div class="border-blog">
+                <a href="/san-pham/chi-tiet/{{$row->slug}}" class=" more-neo">Xem chi tiết <i class="fa-solid fa-arrow-right-long arrow-detail"></i></a>
+              </div>
+            </div>  
+          </div>
+        </div>
+            @endforeach
+            </div>
+            </div>
+    </div>
+  
     </div>
   
   </div>
 </div>
+
 
   </main>
 

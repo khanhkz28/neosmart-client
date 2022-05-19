@@ -228,6 +228,9 @@ line-height: 26px;}
 	.news-title {
 		color:#333;
 	}
+	.news-title:hover {
+		color:#777;
+	}
 	/* construction */
 	.section-ct-body{
 		margin: 50px 0;

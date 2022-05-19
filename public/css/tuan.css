@@ -35,6 +35,14 @@
     left: 0;
     transition: 0.25s ease-in-out;
 }
+/* @media (max-width: 992px) { 
+    .sub-navbar {
+        top: 0;
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
 
 .sub-navbar .nav-link {
     font-size: 16px;
