@@ -266,7 +266,7 @@
             @foreach($data["hotblog"] as $row )
             <div class=" container-card-neo ">
           <div class=" slide-blog">  
-            <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img boxshadow-img">
+            <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img-blog boxshadow-img">
             <div class="card-bot card-bot-blog">
               <h2 class="card-title-neo-product">{{$row->title}}</h2>
               <div class="border-blog">

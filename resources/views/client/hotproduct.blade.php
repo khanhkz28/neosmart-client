@@ -20,7 +20,7 @@
               <p class="card-text hot-product-description py-3">{{$row->description}}</p>
               <div class="d-flex justify-content-between align-items-center hot-product-price py-3">
                 <span>Giá :</span>
-                <small>{{$row->price}}VNĐ</small>
+                <small>{{ number_format($row->price, 0, ',', '.') }} VNĐ</small>
               </div>
             </div>
           </div>
