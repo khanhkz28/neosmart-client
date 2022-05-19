@@ -28,4 +28,7 @@ class Blog extends Model
             ListBlog::class,'listblog_id'
         );
     }
+    function scopeGetByHotBlog(){
+        return $this->orderBy('id','desc')->where('position', 1)->paginate(5);
+    }
 }

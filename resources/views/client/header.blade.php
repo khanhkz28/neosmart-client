@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light postion-relative py-4 py-2 position-fixed w-100">
   <div class="container">
   <div class="brand-image d-flex flex-row flex-nowrap justify-content-between">
@@ -13,11 +15,31 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/">Trang chủ</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item relative">
           <a class="nav-link" href="/cong-trinh">Công trình <i class="bi bi-chevron-down"></i></a>
+          <ul class="sub-navbar bg-light mb-2 mb-lg-0">
+              <li class="nav-item pt-2">
+                <a class="nav-link" aria-current="page" href="/cong-trinh/cong-trinh-chung-cu">Công trình Chung cư</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link" aria-current="page" href="/cong-trinh-homestay">Công trình HomeStay</a>
+              </li>
+          </ul>
         </li>
-        <li class="nav-item">
+        <li class="nav-item relative">
           <a class="nav-link" href="/san-pham">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
+          <ul class="sub-navbar bg-light mb-2 mb-lg-0">
+              <li class="nav-item pt-2">
+                <a class="nav-link" aria-current="page" href="/san-pham/cong-trinh-biet-thu-lon-lau-dai">Công trình Biệt thự lớn - Lâu đài</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link" aria-current="page" href="/san-pham/cong-trinh-chung-cu">Công trình Chung cư</a>
+                
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link" aria-current="page" href="/san-pham/thiet-bi-xu-ly-trung-tam">Thiết bị xử lý trung tâm</a>
+              </li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/faq">Hỏi đáp</a>

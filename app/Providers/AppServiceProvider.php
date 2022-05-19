@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        return View::share("data", ["faq" => Faq::GetAllFooter(),"blogs" => Blog::GetAll(),"hotproducts" => Product::GetByHotProduct()]);
+        return View::share("data", ["faq" => Faq::GetAllFooter(),"blogs" => Blog::GetAll(),"hotblog" => Blog::GetByHotBlog(),"hotproducts" => Product::GetByHotProduct()]);
 
     }
 }

@@ -221,6 +221,9 @@ line-height: 26px;}
 	.featurette-img img{
 		width: 100%;
 	}
+	.news-title {
+		color:#333;
+	}
 	/* construction */
 	.section-ct-body{
 		margin: 50px 0;

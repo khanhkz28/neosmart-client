@@ -16,7 +16,7 @@
       </div>
     </div>
   </section>      
-  <section class="container  my-5">
+  <section class="container my-5">
   <footer class="row featurette">
   <div class="featurette-heading"><a>Tin tức</a></div>
       <div class="col-md-7 col-sm-12 order-2 order-md-1">
@@ -24,7 +24,7 @@
           
             @foreach($data["blogs"] as $blog )
                     <div class="featurette-news">
-                        <h3>{{$blog->title}}</h3>
+                        <a href="/cong-trinh/{{$blog->slug}}" ><h3 class="news-title">{{$blog->title}}</h3></a>
                         <p>{!!$blog->description!!}</p>
                     </div>          
             @endforeach

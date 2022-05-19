@@ -187,7 +187,7 @@
           <h2 class="neo-heading">NeoSmart Security</h2>
         </div>
           <p class="neo-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-    </div>
+    </div>  
 <div class="slide-neo">
   <div class="container ">
 
@@ -199,17 +199,39 @@
         <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img">
         <div class="card-bot">
         <h2 class="card-title-neo">{{$row->title}}</h2>  
-        <a href="#" class=" more-neo">Xem chi tiết</a>
+        <a href="/san-pham/chi-tiet/{{$row->slug}}" class=" more-neo">Xem chi tiết</a>
       </div>  
       </div>
     </div>
         @endforeach
         </div>
         </div>
-</div>    
+</div>
 </section>
 <div class="footer1 ">
-  <div class="background-footer">
+  <div class="background-footer ">
+    <div class="">
+    <div class="slide-neo ">
+    <div class="container ">
+
+      <div id="wapper">
+        <div class="row filtering">
+        @foreach($data["hotblog"] as $row )
+          <div class="container-card-neo mt-20">
+            <div class="card-neo-device bg-none">  
+              <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img">
+              <div class="card-bot">
+              <h2 class="card-title-neo">{{$row->title}}</h2>  
+              <a href="/cong-trinh/{{$row->slug}}" class=" more-neo">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+        @endforeach
+      </div>
+    </div>
+</div>
+    </div>
+  
   </div>
 </div>
 

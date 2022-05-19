@@ -14,14 +14,15 @@
         doloribus officiis.</p>
     </div>
   </div>
-  <div class="container">
-
+  
   @if(session('alert'))
-     <div class="my-5 alert alert-success d-flex align-items-center alert-dismissible fade show" role="alert">
+     <div class="my-5 alert alert-success d-flex align-items-center alert-dismissible fade show container" role="alert">
   <strong>{{session('alert')}}</strong> 
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
      @endif
+  <div class="container">
+
     <div class="d-flex m-5 justify-content-center pt-5">
    
       <div class="detail-contact col-lg-6 col-sm-12 col-md-12 d-flex flex-column p-4 mt-4 order-lg-1  order-2">
