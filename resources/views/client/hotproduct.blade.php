@@ -9,10 +9,10 @@
          
     
             <div class="card-body">
-           <a href="sanpham//{{$row->id}}" class="product-box-img">
+           <a class="product-box-img">
 
            <img src="http://localhost:8000/images/{{$row->photo}}" alt="{{$row->title}}"></a>
-           <a href="sanpham//{{$row->id}}" class="product-box-img">
+           <a  class="product-box-img">
 
            <h2 class="card-title hot-product-title py-1">{{$row->title}}</h2></a>
             

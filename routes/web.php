@@ -41,9 +41,10 @@ Route::group(['prefix' => 'cong-trinh'], function ($router) {
 // });
 Route::group(['prefix' => 'san-pham'], function ($router) {
     // Route::get('/', [ProductController::class, 'GetAll']);
-    Route::get('/', [CategoryController::class, 'GetAll']);
+    
     Route::get('/{slug}', [ProductController::class, 'GetByCategory']);
     // Route::get('chi-tiet/{slug}', [ProductController::class, 'GetById']);
 });
 
-
+Route::get('nha-thong-minh', [CategoryController::class, 'GetAll']);
+Route::get('thiet-bi-nha-thong-minh', [ProductController::class, 'GetAll']);
