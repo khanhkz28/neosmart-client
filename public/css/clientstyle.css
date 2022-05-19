@@ -45,6 +45,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.active{
+	font-weight: 600;
+	color: rgb(51 179 166)!important;
+}
 :root {
 	--prinary: #33B3A6;
 	--white: #ffffff; 
