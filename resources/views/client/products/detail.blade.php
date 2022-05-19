@@ -4,8 +4,16 @@
 @section('breadcrumb-second', 'Sản phẩm chi tiết')
 @section('main')
 <main>
-  product detail
-  <div class="section-contact">
+  
+  <section class="container">
+        <div class="subHeading">
+            Sản phẩm
+        </div>
+        <div class="Heading">
+            <h1>{{ $row->title }}</h1>
+        </div>
+  </section>
+  <div class="section-contact container">
     <div class="row">
       <div class="section-contact-box col-xl-3 col-lg-6">
         <h2>Liên hệ với chúng tôi ngay!</h2>
