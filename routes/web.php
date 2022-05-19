@@ -27,6 +27,7 @@ Route::get('/lienhe', function () {
     return view('client.contant');
 });
 Route::post('/lienhe', [ClientMessageController::class, 'contact']);
+Route::post('/email', [ClientMessageController::class, 'sendEmail'])->name('send.email');
 Route::get('/faq', [FaqController::class, 'GetAll']);
 Route::get('/pagination', [PaginationController::class, 'index']);
 Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);

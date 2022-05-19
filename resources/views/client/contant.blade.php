@@ -14,13 +14,17 @@
         doloribus officiis.</p>
     </div>
   </div>
-  
   @if(session('alert'))
      <div class="my-5 alert alert-success d-flex align-items-center alert-dismissible fade show container" role="alert">
   <strong>{{session('alert')}}</strong> 
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
      @endif
+     @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                        @endif
   <div class="container">
 
     <div class="d-flex m-5 justify-content-center pt-5">
@@ -43,7 +47,7 @@
       </div>
       <div class="form-contact col-lg-6 col-sm-12 col-md-12 d-flex flex-column p-5 bg-white mt-4  order-lg-2  order-1">  
       <h2 class="title-form fw-400 lh-30 w-100 text-left">GỬI TIN NHẮN CHO CHÚNG TÔI</h2>
-        <form action="/lienhe" method="post" class="my-5 ">
+        <form action="{{ route('send.email') }}" method="post" class="my-5 ">
           @csrf
           <div class="form-group mb-3">
             <label for="" class="lh-30">Tên</label>
