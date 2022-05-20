@@ -21,7 +21,7 @@
 </div>
      @endif
      @if(session()->has('message'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success container">
                             {{ session()->get('message') }}
                         </div>
                         @endif

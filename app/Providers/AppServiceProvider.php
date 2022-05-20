@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Support\ServiceProvider;
 
 use App\Models\Faq;
+use App\Models\ListBlog;
 use App\Models\Product;
 use Illuminate\Support\Facades\View;
 class AppServiceProvider extends ServiceProvider
@@ -28,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        return View::share("data", ["faq" => Faq::GetAllFooter(),"blogs" => Blog::GetAll(),"hotblog" => Blog::GetByHotBlog(),"hotproducts" => Product::GetByHotProduct(),"hotcategory" => Category::GetByHotCategory()]);
+        return View::share("data", ["faq" => Faq::GetAllFooter(),"blogs" => Blog::GetAll(),"hotblog" => Blog::GetByHotBlog(),"hotproducts" => Product::GetByHotProduct(),"hotcategory" => Category::GetByHotCategory(), "bloglist" => ListBlog::GetAll()]);
 
     }
 }

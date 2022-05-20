@@ -130,7 +130,7 @@
     display: flex;
     height: 450px;
     align-items: center;
-    top: 16%;
+    top: 10%;
     left: 8%;
 }
 @media (max-width: 576px) {
@@ -140,6 +140,12 @@
         justify-content: center;
         top: 20%;
         left: 4%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .content-banner2 {
+        justify-content: center;
     }
 }
 
@@ -545,13 +551,11 @@
     border-radius: 8px;
 }
 
-
-
 .card-title-neo-img-product {
     width: 100%;
     height: 45%;
     object-fit: contain;
-    padding:1.5rem 3rem 0 3rem;
+    padding: 1.5rem 3rem 0 3rem;
 }
 
 .card-title-neo {
@@ -577,35 +581,34 @@
 }
 /* neo-more */
 .more-neo:hover {
-    animation:transform-more-in 0.25s linear forwards;
+    animation: transform-more-in 0.25s linear forwards;
 }
 .un-hover-more-neo {
     animation: transform-more-out 0.25s linear forwards;
 }
 
 @keyframes transform-more-in {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    100%{
+    100% {
         transform: translateX(10%);
     }
 }
 
 @keyframes transform-more-out {
-    0%{
+    0% {
         transform: translateX(10%);
     }
-    100%{
+    100% {
         transform: translateX(0);
     }
 }
 
 /* End neo-more */
 
-
-.category-slick .slick-prev::before, .category-slick
-.slick-next::before {
+.category-slick .slick-prev::before,
+.category-slick .slick-next::before {
     color: white !important;
 }
 .background-footer {
@@ -618,7 +621,6 @@
     height: 400px;
     background-repeat: repeat;
 }
-
 
 .translate-y-20 {
     transform: translateY(-15%);
@@ -640,7 +642,7 @@
 
 .text-footer-1 {
     width: 520px;
-    color:#fff;
+    color: #fff;
     font-style: 1rem;
     font-weight: 400;
     margin-top: 3rem;
@@ -697,7 +699,7 @@
 @media (max-width: 992px) {
     .card-title-neo-img-product {
         object-fit: contain;
-        padding:0 1rem;
+        padding: 0 1rem;
     }
 }
 
@@ -710,7 +712,7 @@
 }
 
 .card-price-neo {
-    color:#33B3A6;
+    color: #33b3a6;
 }
 
 .card-title-price {
@@ -725,7 +727,6 @@
 }
 
 /* End card product */
-
 
 /* Card blog */
 
@@ -762,7 +763,7 @@
     }
 }
 
-.title-neosmart img{
+.title-neosmart img {
     width: 90%;
     height: 70%;
     object-fit: contain;
@@ -781,8 +782,11 @@
 
 .border-blog {
     margin-top: -30px;
-    border-top: 4px solid #33B3A6;
+    border-top: 4px solid #33b3a6;
     padding-top: 10px;
+}
+.alert-success {
+    text-align: center;
 }
 
 .card-bot-blog {
@@ -792,8 +796,11 @@
 
 /* End Card blog */
 
-
 .arrow-detail {
     transform: translateX(250%);
     font-size: 1.1rem;
+}
+
+.translate-y-40 {
+    transform: translateY(40%);
 }

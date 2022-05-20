@@ -44,23 +44,25 @@
             <p><span>T.</span>+62-812-7313-4321</p>
             <p><span>E.</span>neosmart@gmail.com</p>
         </div>
-        <div class="col">
-            <h4 class="mb-5">Trang chủ</h4>
-            <ul>
-                <li><a href="/cong-trinh">Công trình</a></li>
-                <li><a href="/thiet-bi-nha-thong-minh">Sản phẩm</a></li>
-                <li><a href="/faq">Hỏi đáp</a></li>
-                <li><a href="/lienhe">Liên hệ</a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <h4 class="mb-5">Follow US</h4>
-            <ul>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Facebook</a></li>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">Youtube</a></li>
-            </ul>
+        <div class="col row ">
+            <div class="col">
+                <h4 class="mb-5">Trang chủ</h4>
+                <ul>
+                    <li><a href="/cong-trinh">Công trình</a></li>
+                    <li><a href="/thiet-bi-nha-thong-minh">Sản phẩm</a></li>
+                    <li><a href="/faq">Hỏi đáp</a></li>
+                    <li><a href="/lienhe">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4 class="mb-5">Follow US</h4>
+                <ul>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">LinkedIn</a></li>
+                    <li><a href="">Youtube</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <h2 class="mt-5">2022 © NeoSmart. All rights reserved.</h2>

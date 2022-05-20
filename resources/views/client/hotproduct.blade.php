@@ -32,7 +32,7 @@
     <p style="text-align:justify;">&nbsp;</p>
     </div> --}}
 
-    <div class="slide-neo ">
+    <div class="slide-neo mt-5">
       <div class="container ">
         <div id="wapper">
         <div class="row filtering">

@@ -47,7 +47,7 @@
     </div>
 
   </section>
-  <div class="arrow-home translate-y-20" id="arrow-home " >
+  <div class="arrow-home translate-y-40" id="arrow-home " >
     <i onclick="scrollWin()" class="fa-solid fa-angles-down arrow-icon"></i>
 
   </div>
@@ -111,7 +111,7 @@
                 </div>
               </div>
               <div class="end -card">
-                <a href="/sanpham/" class="learn-more">Learn more</a>
+                <a href="/thiet-bi-nha-thong-minh" class="learn-more">Learn more</a>
               </div>
           </div>
           {{-- endcardhome-silde --}}

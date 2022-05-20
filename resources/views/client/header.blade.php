@@ -18,21 +18,31 @@
         <li class="nav-item relative">
           <a class="nav-link {{ request()->is('cong-trinh', 'cong-trinh/*') ? 'active' : '' }}" href="/cong-trinh">Công trình <i class="bi bi-chevron-down"></i></a>
           <ul class="sub-navbar mb-2 mb-lg-0">
-              <li class="nav-item bg-light pt-2">
-                <a class="nav-link " aria-current="page" href="/cong-trinh/cong-trinh-chung-cu">Công trình Chung cư</a>
+            
+            @foreach($data["bloglist"] as $row )
+              <li class="nav-item bg-light ">
+                <a class="nav-link " aria-current="page" href="/{{$row->slug}}">{{$row->title}}</a>
               </li>
-              <li class="nav-item bg-light mb-2">
+              {{-- /cong-trinh/cong-trinh-chung-cu --}}
+              {{-- Công trình Chung cư --}}
+              @endforeach
+              {{-- <li class="nav-item bg-light mb-2">
                 <a class="nav-link " aria-current="page" href="/cong-trinh-homestay">Công trình HomeStay</a>
-              </li>
+              </li> --}}
           </ul>
         </li>
         <li class="nav-item relative">
           <a class="nav-link {{ request()->is('thiet-bi-nha-thong-minh' , 'nha-thong-minh' ) ? 'active' : '' }}" href="{{ url('thiet-bi-nha-thong-minh') }}">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
-          <ul class="sub-navbar bg-light mb-2 mb-lg-0">
-              <li class="nav-item pt-2">
-                <a class="nav-link " aria-current="page" href="{{ url('nha-thong-minh') }}">Nhà thông minh</a>
+          <ul class="sub-navbar mb-2 mb-lg-0">
+            {{-- @foreach($data["hotcategory"] as $row )
+              <li class="nav-item bg-light pt-2">
+                <a class="nav-link " aria-current="page" href="/{{$row->slug}}">{{$row->title}}</a>
               </li>
-              <li class="nav-item mb-2">
+              @endforeach --}}
+              <li class="nav-item bg-light">
+                <a class="nav-link" aria-current="page" href="{{ url('nha-thong-minh') }}">Nhà thông minh</a>
+              </li>
+              <li class="nav-item bg-light mb-2">
                 <a class="nav-link" aria-current="page" href="{{ url('thiet-bi-nha-thong-minh') }}">Thiết bị Nhà thông minh</a>
               </li>
           </ul>
