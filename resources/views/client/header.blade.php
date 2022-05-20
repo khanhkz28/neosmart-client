@@ -3,8 +3,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light postion-relative py-4 py-2 position-fixed w-100">
   <div class="container">
   <div class="brand-image d-flex flex-row flex-nowrap justify-content-between">
-    {{-- <a class="navbar-brand" href="{{route('home')}}"><img class="img-home" src="{{asset('/images/client/logo.png')}}"
-        alt="logo"></a> --}}
+   <a class="navbar-brand" href="{{route('home')}}"><img class="img-home" src="{{asset('/images/client/logo.png')}}"
+        alt="logo"></a>
     <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
       <i class="bi bi-list"></i>
     </button>
@@ -27,7 +27,7 @@
           </ul>
         </li>
         <li class="nav-item relative">
-          <a class="nav-link {{ request()->is('san-pham' , 'san-pham/*' ) ? 'active' : '' }}" href="{{ url('thiet-bi-nha-thong-minh') }}">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
+          <a class="nav-link {{ request()->is('thiet-bi-nha-thong-minh' , 'nha-thong-minh' ) ? 'active' : '' }}" href="{{ url('thiet-bi-nha-thong-minh') }}">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>
           <ul class="sub-navbar bg-light mb-2 mb-lg-0">
               <li class="nav-item pt-2">
                 <a class="nav-link " aria-current="page" href="{{ url('nha-thong-minh') }}">Nhà thông minh</a>
