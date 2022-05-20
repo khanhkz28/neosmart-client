@@ -8,8 +8,8 @@
   <div class="banner">
     <img src="{{asset('images/client/bannerct.png')}}" alt="{{ $row->title }}" class="banner-img">
     <div class="content-banner">
-      <h2 class="heading-banner">{{ $row->title }}</h2>
-      <p class="des-banner">{{ $row->description }}</p>
+      <h2 class="heading-banner">Công trình đã thực hiện</h2>
+      <p class="des-banner">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
   </div>
   </div>
 
