@@ -1,4 +1,4 @@
-
+// -------------------
 let main = document.getElementsByTagName('main');
 let brandImage = document.querySelector('.img-home')
 let navbar = document.querySelector('.navbar');
@@ -6,6 +6,19 @@ const btnToggle = document.querySelector('.navbar-toggler');
 const menu = document.getElementsByClassName('nav-menu');
 const searchForm = document.querySelector('.form-search');
 let navHeight = navbar.clientHeight;
+// -------------------
+let moreNeo = document.querySelectorAll('.more-neo')
+
+    moreNeo.forEach(item => {
+        item.addEventListener('mouseleave', function (e) {
+            e.target.classList.add('un-hover-more-neo');
+            
+        })
+
+        item.addEventListener('mouseover', function (e) {
+            e.target.classList.remove('un-hover-more-neo');
+        })
+    })
 
 setHeight = () => {
     main[0].style.marginTop = navHeight + "px";

@@ -22,9 +22,8 @@
     animation: hoverSubMenu 0.25s linear forwards;
 }
 @media (max-width: 556px) {
-    .relative:hover > .sub-navbar{
-        animation:unset;
-    }
+    .relative:hover {
+}
 }
 
 .sub-navbar {

@@ -70,9 +70,7 @@ $(".js-filter").on("click", function () {
 const slider = (function () {
     //const
     const slider = document.getElementById("slider"); // основная обертка
-    console.log(slider);
     const sliderContent = document.querySelector(".slider-content"); // обертка для контейнера слайдов и контролов
-    console.log(sliderContent);
     const sliderWrapper = document.querySelector(".slider-content-wrapper"); // контейнер для слайдов
     const elements = document.querySelectorAll(".slider-content__item"); // обертка для слайда
     const sliderContentControls = createHTMLElement(
@@ -344,6 +342,7 @@ slider.init({
 });
 // button home
 function scrollWin() {
+    console.log('a');
     window.scrollBy(0, 650, "smooth");
 }
 // slide-bot-home

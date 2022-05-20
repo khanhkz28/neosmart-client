@@ -47,8 +47,8 @@
     </div>
 
   </section>
-  <div class="arrow-home" id="arrow-home" onclick="scrollWin()">
-    <i class="fa-solid fa-angles-down arrow-icon"></i>
+  <div class="arrow-home translate-y-20" id="arrow-home " >
+    <i onclick="scrollWin()" class="fa-solid fa-angles-down arrow-icon"></i>
 
   </div>
   <section class="container">
@@ -72,8 +72,7 @@
                 <p class="des-text">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
               </div>
               <div class="end -card">
-                <a href="#" class="learn-more">Learn more</a>
-                {{-- <a href="#"><i class="fa-thin fa-arrow-right-long"></i></a> --}}
+                <a href="/nha-thong-minh" class="learn-more">Learn more</a>
               </div>
             </div>
           </div>
@@ -113,7 +112,6 @@
               </div>
               <div class="end -card">
                 <a href="/sanpham/" class="learn-more">Learn more</a>
-                {{-- <a href="#"><i class="fa-thin fa-arrow-right-long"></i></a> --}}
               </div>
           </div>
           {{-- endcardhome-silde --}}
@@ -136,8 +134,8 @@
                   <p class="des-text">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
                 </div>
                 <div class="end -card">
-                  <a href="#" class="learn-more">Learn more</a>
-                  {{-- <a href="#"><i class="fa-thin fa-arrow-right-long"></i></a> --}}
+                  <a href="/nha-thong-minh" class="learn-more">Learn more</a>
+                  
                 </div>
               </div>
             </div>
@@ -153,8 +151,8 @@
                   <p class="des-text">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
                 </div>
                 <div class="end -card">
-                  <a href="#" class="learn-more">Learn more</a>
-                  {{-- <a href="#"><i class="fa-thin fa-arrow-right-long"></i></a> --}}
+                  <a href="/nha-thong-minh" class="learn-more">Learn more</a>
+                  
                 </div>
               </div>
             </div>
@@ -170,8 +168,8 @@
                   <p class="des-text">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
                 </div>
                 <div class="end -card">
-                  <a href="#" class="learn-more">Learn more</a>
-                  {{-- <a href="#"><i class="fa-thin fa-arrow-right-long"></i></a> --}}
+                  <a href="/nha-thong-minh" class="learn-more">Learn more</a>
+                  
                 </div>
               </div>
             </div>
@@ -199,7 +197,7 @@
         <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img boxshadow-img">
         <div class="card-bot ">
         <h2 class="card-title-neo">{{$row->title}}</h2>  
-        <a href="/san-pham/chi-tiet/{{$row->slug}}" class=" more-neo">Xem chi tiết <i class="fa-solid fa-arrow-right-long arrow-detail"></i></a>
+        <a href="/san-pham/{{$row->slug}}" class=" more-neo">Xem chi tiết <i class="fa-solid fa-arrow-right-long arrow-detail"></i></a>
       </div>  
       </div>
     </div>
@@ -223,7 +221,7 @@
         <div class="row filtering">
             @foreach($data["hotproducts"] as $row )
             <div class=" container-card-neo ">
-          <div class="card-neo-device slide-product">  
+              <div class="card-neo-device slide-product">  
             <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img-product">
             <div class="card-bot ">
               <h2 class="card-title-neo-product">{{$row->title}}</h2>
@@ -237,6 +235,7 @@
               </div>
             </div>  
           </div>
+              
         </div>
             @endforeach
             </div>
@@ -251,7 +250,7 @@
       <div class="col-6 title-neosmart">
         <img  src="/images/neosmart-banner.png">
       </div>
-      <div class="content-footer-1 col-6">
+      <div class="content-footer-1 col-6 ">
         <h3 class="title-footer-1">Công trình đã thực hiện</h3>
         <p class="text-footer-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       </div>
@@ -266,11 +265,11 @@
             @foreach($data["hotblog"] as $row )
             <div class=" container-card-neo ">
           <div class=" slide-blog">  
-            <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img-blog boxshadow-img">
+              <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img-blog boxshadow-img">
             <div class="card-bot card-bot-blog">
               <h2 class="card-title-neo-product">{{$row->title}}</h2>
               <div class="border-blog">
-                <a href="/san-pham/chi-tiet/{{$row->slug}}" class=" more-neo">Xem chi tiết <i class="fa-solid fa-arrow-right-long arrow-detail"></i></a>
+                <a href="/cong-trinh/{{$row->slug}}" class="more-neo">Xem chi tiết <i class="fa-solid fa-arrow-right-long arrow-detail"></i></a>
               </div>
             </div>  
           </div>

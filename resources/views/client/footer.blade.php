@@ -9,7 +9,7 @@
       <div class="col-md-7 col-sm-12">
       @foreach($data["faq"] as $faqs )
                     <div class="featurette-news">
-                        <h3>{{$faqs->title}}</h3>
+                      <a href="/faq" ><h3  class="news-title">{{$faqs->title}}</h3></a>
                         <p>{{$faqs->content}}</p>
                     </div>          
             @endforeach

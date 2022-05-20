@@ -460,7 +460,8 @@
 }
 .top-neo {
     height: 45%;
-    width: 50%;
+    width: 90%;
+    padding: 0 24px;
     margin: auto;
 }
 @media (max-width: 576px) {
@@ -531,7 +532,7 @@
     width: 100%;
     height: 60%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 .boxshadow-img {
     box-shadow: 0px 1px 8px 1px #c6c6c6;
@@ -540,9 +541,11 @@
 .card-title-neo-img-blog {
     width: 100%;
     height: 236px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 8px;
 }
+
+
 
 .card-title-neo-img-product {
     width: 100%;
@@ -572,6 +575,35 @@
     font-size: 0.8rem;
     font-style: italic;
 }
+/* neo-more */
+.more-neo:hover {
+    animation:transform-more-in 0.25s linear forwards;
+}
+.un-hover-more-neo {
+    animation: transform-more-out 0.25s linear forwards;
+}
+
+@keyframes transform-more-in {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(10%);
+    }
+}
+
+@keyframes transform-more-out {
+    0%{
+        transform: translateX(10%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* End neo-more */
+
+
 .category-slick .slick-prev::before, .category-slick
 .slick-next::before {
     color: white !important;
@@ -712,6 +744,22 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+}
+
+@media (max-width: 765px) {
+    .title-neosmart {
+        display: none;
+    }
+    .content-footer-1 {
+        width: 100%;
+        align-items: center;
+    }
+    .text-footer-1 {
+        width: 100%;
+    }
+    .background-footer {
+        padding: 0 24px;
+    }
 }
 
 .title-neosmart img{
