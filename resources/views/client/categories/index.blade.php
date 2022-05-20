@@ -1,7 +1,7 @@
 @extends('client.layout')
-@section('pageTitle', 'Danh mục sản phẩm')
-@section('breadcrumb-first', 'Danh mục sản phẩm')
-@section('breadcrumb-second', 'Danh mục sản phẩm')
+@section('pageTitle', 'Nhà thông minh')
+@section('breadcrumb-first', 'Nhà thông minh')
+@section('breadcrumb-second', 'Nhà thông minh')
 @section('main')
 <main>
 <div class="container-banner "> 

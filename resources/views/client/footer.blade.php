@@ -47,10 +47,10 @@
         <div class="col">
             <h4 class="mb-5">Trang chủ</h4>
             <ul>
-                <li><a href="/congtrinh">Công trình</a></li>
-                <li><a href="/sanpham">Sản phẩm</a></li>
-                <li><a href="hoi-dap">Hỏi đáp</a></li>
-                <li><a href="lien-he">Liên hệ</a></li>
+                <li><a href="/cong-trinh">Công trình</a></li>
+                <li><a href="/thiet-bi-nha-thong-minh">Sản phẩm</a></li>
+                <li><a href="/faq">Hỏi đáp</a></li>
+                <li><a href="/lienhe">Liên hệ</a></li>
             </ul>
         </div>
         <div class="col">

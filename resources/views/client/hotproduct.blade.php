@@ -11,7 +11,7 @@
             <div class="card-body">
            <a class="product-box-img">
 
-           <img src="http://localhost:8000/images/{{$row->photo}}" alt="{{$row->title}}"></a>
+           <img src="{{asset('images/')}}/{{$row->photo}}" alt="{{$row->title}}"></a>
            <a  class="product-box-img">
 
            <h2 class="card-title hot-product-title py-1">{{$row->title}}</h2></a>
