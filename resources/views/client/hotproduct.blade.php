@@ -1,45 +1,13 @@
-{{-- <div class="container">
-        <p>&nbsp;</p>
-        <div id="wapper">
-        <div class="row filtering">
-            @foreach($data["hotproducts"] as $row )
-       
-            <div class="col ">
-          <div class="card shadow-sm m-2 hot-product">
-         
-    
-            <div class="card-body">
-           <a class="product-box-img">
-
-           <img src="{{asset('images/')}}/{{$row->photo}}" alt="{{$row->title}}"></a>
-           <a  class="product-box-img">
-
-           <h2 class="card-title hot-product-title py-1">{{$row->title}}</h2></a>
-            
-           
-              <p class="card-text hot-product-description py-3">{{$row->description}}</p>
-              <div class="d-flex justify-content-between align-items-center hot-product-price py-3">
-                <span>Giá :</span>
-                <small>{{ number_format($row->price, 0, ',', '.') }} VNĐ</small>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-            @endforeach
-            </div>
-            </div>
-    <p style="text-align:justify;">&nbsp;</p>
-    </div> --}}
 
     <div class="slide-neo mt-5">
       <div class="container ">
+      <p>&nbsp;</p>
         <div id="wapper">
         <div class="row filtering">
             @foreach($data["hotproducts"] as $row )
             <div class=" container-card-neo ">
           <div class="card-neo-device slide-product">  
-            <img src="images/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img-product">
+            <img src="{{asset('images/')}}/{{$row->photo}}" alt="{{$row->title}}" class="card-title-neo-img-product">
             <div class="card-bot ">
               <h2 class="card-title-neo-product">{{$row->title}}</h2>
               <div>

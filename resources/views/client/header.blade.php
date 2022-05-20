@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light postion-relative py-4 py-2 position-fixed w-100">
   <div class="container">
   <div class="brand-image d-flex flex-row flex-nowrap justify-content-between">
-   <a class="navbar-brand" href="{{route('home')}}"><img class="img-home" src="{{asset('/images/client/logo.png')}}"
+   <a class="navbar-brand" href="{{route('home')}}"><img class="img-home" src="/images/client/logo.png"
         alt="logo"></a>
     <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
       <i class="bi bi-list"></i>
@@ -17,19 +17,30 @@
         </li>
         <li class="nav-item relative">
           <a class="nav-link {{ request()->is('cong-trinh', 'cong-trinh/*') ? 'active' : '' }}" href="/cong-trinh">Công trình <i class="bi bi-chevron-down"></i></a>
+<<<<<<< HEAD
           <ul class="sub-navbar mb-2 mb-lg-0">
             
             @foreach($data["bloglist"] as $row )
               <li class="nav-item bg-light ">
                 <a class="nav-link " aria-current="page" href="/{{$row->slug}}">{{$row->title}}</a>
+=======
+          <!-- <ul class="sub-navbar mb-2 mb-lg-0">
+              <li class="nav-item bg-light pt-2">
+                <a class="nav-link " aria-current="page" href="/cong-trinh/cong-trinh-chung-cu">Công trình Chung cư</a>
+>>>>>>> ff66a4b9ef72bd85f6e5cc95a350398f50b88300
               </li>
               {{-- /cong-trinh/cong-trinh-chung-cu --}}
               {{-- Công trình Chung cư --}}
               @endforeach
               {{-- <li class="nav-item bg-light mb-2">
                 <a class="nav-link " aria-current="page" href="/cong-trinh-homestay">Công trình HomeStay</a>
+<<<<<<< HEAD
               </li> --}}
           </ul>
+=======
+              </li>
+          </ul> -->
+>>>>>>> ff66a4b9ef72bd85f6e5cc95a350398f50b88300
         </li>
         <li class="nav-item relative">
           <a class="nav-link {{ request()->is('thiet-bi-nha-thong-minh' , 'nha-thong-minh' ) ? 'active' : '' }}" href="{{ url('thiet-bi-nha-thong-minh') }}">Sản phẩm <i class="bi bi-chevron-down fw-bold"></i></a>

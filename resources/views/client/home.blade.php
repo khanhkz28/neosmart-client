@@ -16,7 +16,7 @@
             <img src="{{asset('images/client/logo.png')}}" alt="">
           </div>
           <p class="fw-normal  my-3">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
-          <a class="btn btnprinary btn-outline-secondary my-3" href="#">Tìm hiểu thêm</a>
+          <a class="btn btnprinary btn-outline-secondary my-3" href="/nha-thong-minh">Tìm hiểu thêm</a>
         </div>
         <div class="col-md-7  col-sm-12">
             <div class="home-slider-img">
@@ -38,7 +38,7 @@
               </h3>
               <img src={{asset('images/logo.png')}} alt="" class="img-banner2">
               <p class="des-banner-text">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
-              <button class="button-banner">Tìm hiểu thêm</button>
+              <a href="/nha-thong-minh"><button class="button-banner"> Tìm hiểu thêm</button></a>
           </div>
           <div class="right-banner">
             <img src={{asset('images/client/Hero.png')}} alt="" class="right-banner-img">
@@ -62,7 +62,7 @@
             <div class="contain-card">
           <div class="card-home">
               <div class="image-card">
-               <img src={{asset('images/3.png')}} alt="" class="img-incard">
+               <img src="{{asset('images/client/h1.png')}}" alt="" class="img-incard">
               </div>
               <div class="middle">
               <div class="heading">
@@ -79,32 +79,38 @@
           {{-- cardhome-slide --}}
           <div class="card-home-slide">
               <div class="image-card">
-               <img src={{asset('images/3.png')}} alt="" class="img-incard">
+               <img src="{{asset('images/client/h3.png')}}" alt="" class="img-incard">
               </div>
+              <!-- <div class="middle">
+              <div class="heading">
+                    <h2 class="heading-text">Thiết bị nhà thông minh</h2>
+              </div>
+              
+            </div> -->
               <div id="slider" class="slider">
                 <div class="slider-content">
                   <div class="slider-content-wrapper">
-                    <div class="slider-content__item image-1"><img src={{asset('images/gear.png')}} alt="">
+                    <div class="slider-content__item image-1"><img src="{{asset('images/gear.png')}}" alt="">
                     <p class="price-slide">44.000.000 VND</p>
                     <p class="des-slide">Thiết bị điều khiển trung tâm SH-HC</p>
                     </div>
                     <div class="slider-content__item image-1">
-                      <img src={{asset('images/gear.png')}} alt="">
+                      <img src="{{asset('images/gear.png')}}" alt="">
                     <p class="price-slide">44.000.000 VND</p>
                     <p class="des-slide">Thiết bị điều khiển trung tâm SH-HC</p>
                     </div>
-                    <div class="slider-content__item image-1"><img src={{asset('images/gear.png')}} alt="">
+                    <div class="slider-content__item image-1"><img src="{{asset('images/gear.png')}}" alt="">
                       <p class="price-slide">44.000.000 VND</p>
                       <p class="des-slide">Thiết bị điều khiển trung tâm SH-HC</p></div>
                     <div class="slider-content__item image-1">
-                      <img src={{asset('images/gear.png')}} alt="">
+                      <img src="{{asset('images/gear.png')}}" alt="">
                     <p class="price-slide">44.000.000 VND</p>
                     <p class="des-slide">Thiết bị điều khiển trung tâm SH-HC</p>
                     </div>
-                    <div class="slider-content__item image-1"><img src={{asset('images/gear.png')}} alt="">
+                    <div class="slider-content__item image-1"><img src="{{asset('images/gear.png')}} "alt="">
                       <p class="price-slide">44.000.000 VND</p>
                       <p class="des-slide">Thiết bị điều khiển trung tâm SH-HC</p></div>
-                    <div class="slider-content__item image-1"><img src={{asset('images/gear.png')}} alt="">
+                    <div class="slider-content__item image-1"><img src="{{asset('images/gear.png')}}" alt="">
                       <p class="price-slide">44.000.000 VND</p>
                       <p class="des-slide">Thiết bị điều khiển trung tâm SH-HC</p></div>
                   </div>
@@ -124,7 +130,7 @@
               <div class="contain-card">
             <div class="card-home">
                 <div class="image-card">
-                 <img src={{asset('images/3.png')}} alt="" class="img-incard">
+                 <img src="{{asset('images/3.png')}} " alt="" class="img-incard">
                 </div>
                 <div class="middle">
                 <div class="heading">
@@ -141,11 +147,11 @@
             </div>
             <div class="card-home">
                 <div class="image-card">
-                 <img src={{asset('images/3.png')}} alt="" class="img-incard">
+                 <img src="{{asset('images/client/h4.png')}}" alt="" class="img-incard">
                 </div>
                 <div class="middle">
                 <div class="heading">
-                      <h2 class="heading-text">Nhà thông minh</h2>
+                      <h2 class="heading-text">Giải pháp ánh sáng</h2>
                 </div>
                 <div class="des">
                   <p class="des-text">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
@@ -158,11 +164,11 @@
             </div>
             <div class="card-home">
                 <div class="image-card">
-                 <img src={{asset('images/3.png')}} alt="" class="img-incard">
+                 <img src="{{asset('images/client/h2.png')}}" alt="" class="img-incard">
                 </div>
                 <div class="middle">
                 <div class="heading">
-                      <h2 class="heading-text">Nhà thông minh</h2>
+                      <h2 class="heading-text">Kết nối không giới hạn</h2>
                 </div>
                 <div class="des">
                   <p class="des-text">Hệ thống nhà thông minh thế hệ mới nhất trên thế giới, công nghệ vượt trội so với các sản phẩm của Mỹ và Châu Âu - theo tiêu chí xếp hạng của Gartner</p>
